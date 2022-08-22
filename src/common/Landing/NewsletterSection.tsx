@@ -1,0 +1,233 @@
+import React, { useEffect, useState } from 'react';
+import { Button, FormField } from 'components';
+import { change, errorItem, getPredefinedErrors, quickValidation } from 'utils';
+import { useDispatch } from 'react-redux';
+import { authProcess } from 'redux/actions';
+import { useSelector } from 'react-redux';
+import { storeInterface } from 'types';
+import { FormFieldPhoneBox } from 'components/FormField/PhoneBox';
+
+export const NewsLetterSection: React.FC<{}> = () => {
+
+    const dispatch = useDispatch();
+
+    const { util: { states } }: storeInterface = useSelector((store: storeInterface) => store);
+
+    const initialState = {
+        email: "",
+        error: getPredefinedErrors(["email"]),
+        loading: false,
+        attempt: 0,
+        success: undefined
+    };
+
+    const [state, setState] = useState<stateType>(initialState);
+
+    const onChanged = (e: any, field: string) => {
+
+        e = field === "state" ? e : ["mobile", "email"]?.includes(field) ? String(e).trim() : String(e);
+
+        const validation = quickValidation(field, e, state);
+
+        setState((prevState) => ({ ...prevState, [field]: e, error: validation, success: undefined }));
+
+    }
+
+    const formError = Object.values(state.error || {}).map(item => item).filter((item) => Array.isArray(item)).length > 0;
+
+    const disabled = () => {
+
+        if (state.attempt > 0) return formError;
+
+        return false;
+
+    }
+
+    const subscribe: () => void = async () => {
+
+        change(true, "loading", setState);
+
+        const body = state?.isBusiness ?
+
+            {
+                "personalName": state?.fullName,
+                "businessName": state?.business,
+                "phoneNumber": state?.mobile,
+                "emailAddress": state?.email,
+                "stateId": state?.state?.value
+            }
+
+            :
+
+            { email: state.email }
+
+        const response: any = await dispatch(authProcess(state?.isBusiness ? "subscribe-business" : "subscribe", body, true, true));
+
+        setState((prevState) => ({ ...prevState, success: response, loading: false }));
+
+    };
+
+    const preProcess = () => {
+        if (state.success === true) return;
+        setState((prevState) => ({ ...prevState, success: undefined, attempt: prevState.attempt + 1 }))
+        if (!state?.email || state.loading) return;
+        if (formError) return;
+        subscribe();
+    }
+
+    const keyDown = (e: React.KeyboardEvent) => {
+        if (e.key === "Enter") {
+            preProcess();
+        }
+    }
+
+    useEffect(() => {
+
+        if (state.success === true) {
+            setTimeout(() => {
+                setState(initialState);
+            }, 10000);
+        }
+
+        // eslint-disable-next-line
+    }, [state.success]);
+
+    const errorText = typeof state.success === "string" ? state.success : errorItem(state?.error || {}, "email");
+
+    const extraProps = {
+        className: state.success === true ? "form-field-blank" : "",
+        disabled: state.success === true,
+        onKeyDown: (e: React.KeyboardEvent) => keyDown(e)
+    }
+
+    useEffect(() => {
+
+        if (state.isBusiness) {
+
+            setState((prevState) => ({
+
+                ...initialState,
+
+                error: getPredefinedErrors(["email", "business", "fullName", "mobile", "state"]),
+
+                email: prevState.email,
+
+                isBusiness: prevState.isBusiness
+
+            }))
+
+        } else {
+
+            setState((prevState) => ({ ...initialState, email: prevState.email }));
+
+        }
+
+        // eslint-disable-next-line
+    }, [state?.isBusiness]);
+
+    return (
+
+        <div className='landing-page-section-three landing-page-section-newsletter'>
+
+            <div className='landing-page-section-three-div'>
+
+                <h1 className='mb-5'> Join our Waitlist </h1>
+
+                <FormField
+                    label='Email'
+                    placeHolder={"input your email address"}
+                    value={state.success === true ? "Thanks!" : state.email}
+                    onChange={(e: any) => onChanged(e, "email")}
+                    errorClass={state.success === true ? "success-mode" : undefined}
+                    error={state.attempt > 0 && errorText}
+                    {...extraProps}
+                />
+
+                {
+
+                    state.isBusiness &&
+
+
+                    <>
+
+                        <FormField
+                            label='Personal Name'
+                            placeHolder={"input your personal name"}
+                            value={state.fullName}
+                            onChange={(e: any) => onChanged(e, "fullName")}
+                            error={state.attempt > 0 && errorItem(state.error, "fullName")}
+                            {...extraProps}
+                        />
+
+                        <FormField
+                            label='Business Name'
+                            placeHolder={"input your business name"}
+                            value={state.business}
+                            onChange={(e: any) => onChanged(e, "business")}
+                            error={state.attempt > 0 && errorItem(state.error, "business")}
+                            {...extraProps}
+                        />
+
+                        <FormFieldPhoneBox
+                            label='Phone Number'
+                            value={state.mobile}
+                            placeHolder={"your phone number"}
+                            onChange={(e: any) => onChanged(e, "mobile")}
+                            errorClass={state.success === true ? "success-mode" : undefined}
+                            error={state.attempt > 0 && errorItem(state.error, "mobile")}
+                            {...extraProps}
+
+                        />
+
+                        <FormField
+                            label='State'
+                            type={"option"}
+                            options={states.data.map(item => ({ label: item.name, value: item.id }))}
+                            onlyNumber={true}
+                            placeHolder={"select your state"}
+                            value={state?.state?.label}
+                            onChange={(e: any) => onChanged(e, "state")}
+                            errorClass={state.success === true ? "success-mode" : undefined}
+                            error={state.attempt > 0 && errorItem(state.error, "state")}
+                            {...extraProps}
+                        />
+
+                    </>
+
+                }
+
+                <FormField
+                    type="checkbox"
+                    label={"Are you a business ?"}
+                    value={state.isBusiness === true}
+                    onChange={() => setState((prevState) => ({ ...prevState, isBusiness: !prevState.isBusiness }))}
+                />
+
+                <Button
+                    label={state.success ? "You will be notified" : (state.loading ? "Please wait..." : "Register with us")}
+                    onClick={() => preProcess()}
+                    disabled={disabled()}
+                    className={state.success === true ? "button-success" : ""}
+                />
+
+            </div>
+
+        </div>
+
+    );
+
+}
+
+type stateType = {
+    fullName?: string,
+    error:{ [key: string] : {} },
+    isBusiness?: boolean,
+    loading: boolean,
+    attempt: number,
+    success?: boolean,
+    email?: string,
+    business?: string,
+    mobile?: string,
+    emailAddress?: string,
+    state?: { label: string, value: string }
+}

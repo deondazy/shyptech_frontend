@@ -1,0 +1,177 @@
+.landing-page {
+
+  &-section-one {
+
+    @include media-query(pc-low-resolution) {
+      height: 400px;
+    }
+
+    @include media-query(mobile) {
+      padding-top: 140px !important;
+      padding-bottom: 80px !important;
+      height: unset;
+    }
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 440px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    // background-image: url(/assets/sectionOne_img_.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    h1 {
+      @include font-size(xxx-large);
+      max-width: 950px;
+      text-align: center;
+      text-transform: capitalize;
+      color: color(white);
+    }
+
+  }
+
+  &-section-two {
+
+    &-wrapper {
+      background: color(solitude);
+    }
+
+    @extend %body-width-and-padding;
+
+    h1 {
+      margin-bottom: 42px;
+      color: color(darker);
+    }
+
+    &-flex {
+      display: flex;
+      justify-content: space-between;
+
+      &-left {
+
+        @include media-query(pc-high-resolution) {
+          max-width: 460px;
+        }
+
+        max-width: 560px;
+      }
+
+      &-left p {
+        line-height: 1.8;
+      }
+
+      &-left p:last-child {
+        margin-top: 20px;
+      }
+
+      &-right {
+
+        @include media-query(pc-low-resolution) {
+          max-width: 350px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+
+      }
+
+    }
+
+  }
+
+  &-section-three {
+
+    @extend %body-width-and-padding;
+    text-align: center;
+
+    &-div {
+      margin: auto;
+      max-width: 505px;
+    }
+
+    h1 {
+      margin-bottom: 12px;
+      color: color(primary);
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 24px;
+      width: max-content;
+    }
+
+  }
+
+  &-section-newsletter {
+
+    .form-field-title {
+      text-align: left;
+    }
+
+    .labelled-checkbox p {
+      line-height: 1.15;
+    }
+
+    .button {
+      margin-top: 10px;
+      width: 100%;
+    }
+
+  }
+
+  &-section-four {
+
+    @extend %body-width-and-padding;
+
+    &-heading {
+      margin-bottom: 36px;
+      width: max-content;
+
+      h1 {
+        color: color(darker);
+      }
+
+      span {
+        display: block;
+        margin-left: auto;
+        width: 46px;
+        height: 7px;
+        background: color(primary);
+      }
+
+    }
+
+    &-reasons {
+
+      display: flex;
+
+      &-item {
+        margin-right: 36px;
+        min-width: 366px;
+      }
+
+      &-item img {
+        margin-bottom: 36px;
+      }
+
+      h4 {
+        @include font-size(large);
+        margin-bottom: 4px;
+        font-family: $header-font;
+        font-weight: 600;
+        color: color(darker);
+      }
+
+    }
+
+  }
+
+}

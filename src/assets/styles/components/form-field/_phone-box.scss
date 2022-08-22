@@ -1,0 +1,38 @@
+.form-field-phone-box {
+    display: flex;
+    justify-content: space-between;
+
+    .form-field:first-child {
+      width: 115px;
+    }
+
+    .select-pop li {
+      padding: 8px 10px !important;
+
+      img {
+        width: 25px !important;
+        min-width: 25px !important;
+        height: 25px !important;
+        min-height: 25px !important;
+      }
+
+    }
+
+    .form-field .select,
+    .form-field .select:hover {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: 0;
+    }
+
+    .form-field:last-child {
+      width: calc(100% - 115px);
+
+      input {
+        border-top-left-radius: 1px;
+        border-bottom-left-radius: 1px;
+      }
+
+    }
+
+}
