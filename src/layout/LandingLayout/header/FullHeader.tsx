@@ -36,7 +36,7 @@ export const FullHeader: React.FC<{ noRightLinks : boolean }> = ({ noRightLinks 
 
                     )}
 
-                    <Button label={"Send Item"} onClick={() => null } />
+                    { !noRightLinks && <Button label={"Send Item"} onClick={() => null } /> }
 
                 </div>
 
