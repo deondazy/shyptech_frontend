@@ -1,7 +1,7 @@
 import React from 'react';
 import GIG from 'assets/png/landing/partners/logo.png';
 import TopShip from 'assets/png/landing/partners/Topship.png';
-import Kwik from 'assets/png/landing/partners/kwik.png';
+import Kwik from 'assets/png/landing/partners/Kwik.png';
 
 export const Partners:React.FC<{}> = () => {
 
