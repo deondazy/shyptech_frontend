@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux';
 import { accessToken } from 'redux/store';
 import { authProcess } from 'redux/actions';
 import { getAddressInfo } from 'redux/actions/UtilActions';
+import { Partners } from 'common/Landing/Partners';
 
 const Home: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
@@ -51,6 +52,8 @@ const Home: React.FC<Props> = ({ isMobile, deviceWidth }) => {
             <SectionOne />
 
             <NewsLetterSection />
+
+            <Partners />
 
             <SectionTwo />
 

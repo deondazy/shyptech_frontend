@@ -5,7 +5,7 @@ import Shydeck from 'assets/png/shydeck/logo_blue.png';
 import { classnames } from 'utils';
 import { Button } from 'components';
 
-export const FullHeader: React.FC<{ noRightLinks : boolean }> = ({ noRightLinks  }) => {
+export const FullHeader: React.FC<{ noRightLinks: boolean }> = ({ noRightLinks }) => {
 
     return (
         <div
@@ -25,7 +25,7 @@ export const FullHeader: React.FC<{ noRightLinks : boolean }> = ({ noRightLinks 
 
                 <div className="landingLayout-header-right">
 
-                    {( noRightLinks ? [] : rightLinks).map((item, index) =>
+                    {(noRightLinks ? [] : rightLinks).map((item, index) =>
                         <Link
                             key={`landingLayout-header-right-item-${index}`}
                             href={item.link || ""}>
@@ -36,7 +36,7 @@ export const FullHeader: React.FC<{ noRightLinks : boolean }> = ({ noRightLinks 
 
                     )}
 
-                    { !noRightLinks && <Button label={"Send Item"} onClick={() => null } /> }
+                    {!noRightLinks && <Button label={"Send Item"} onClick={() => null} />}
 
                 </div>
 

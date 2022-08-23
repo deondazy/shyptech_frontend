@@ -18,6 +18,13 @@ export const SectionThree: React.FC<{}> = () => {
 
                 <Button
                     label='Register with us'
+                    onClick={()=> {
+
+                        const section = document.getElementById("news-letter");
+
+                        section?.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+
+                    }}
                 />
 
 

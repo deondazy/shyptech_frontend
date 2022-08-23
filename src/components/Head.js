@@ -3,23 +3,23 @@ import Head from 'next/head';
 
 export const HtmlHead = ({ title }) => {
   const description =
-    'Stellas digital bank is your true mobile bank to spend, save, earn interest, ' +
-    'anonymous transfer: ghost mode, automobile loans and more. Licensed & insured with NDIC.';
-  const link = 'http://stellasbank.com';
-  const logo = 'http://stellasbank.com/assets/Stellas-logo.png';
+    '__, ' +
+    '__';
+  const link = 'http://__.com';
+  const logo = 'http://__.png';
 
   const seoAttributes = `{
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Stellas Digital Bank ",
-    "alternateName": ["Stellas Bank", "Stellas", "stellas mfb"],
-    "url": "http://www.stellasbank.com",
-    "sameAs": ["http://www.facebook.com/stellasbank", "http://www.twitter.com/stellasbank"],
+    "name": "__ ",
+    "alternateName": ["__"],
+    "url": "__",
+    "sameAs": ["__"],
 
-    "logo": "https://www.stellasbank.com/assets/Stellas-logo.png",
+    "logo": "__",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "09087339788",
+      "telephone": "__",
       "contactType": "customer service"
     }
   }`;

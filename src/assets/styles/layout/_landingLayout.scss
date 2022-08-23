@@ -184,11 +184,11 @@
       }
 
     &-footer {
-      
+
       @include media-query('pc-low-resolution') {
         padding-top: 40px;
       }
-      
+
       @include media-query('mobile') {
         padding-top: 32px;
       }
@@ -203,13 +203,22 @@
         justify-content: space-between;
       }
 
-    .landing-layout-footer-tab {
+
+    &-tab {
+
       @include media-query(mobile) {
+
+        width: 100%;
+
         &:first-of-type {
           margin-bottom: 50px;
-          width: 100%;
           max-width: unset !important;
         }
+
+        &:not(:first-child) {
+          margin-top: 20px;
+        }
+
       }
 
       margin-right: 10px;
@@ -222,9 +231,14 @@
         max-width: 300px;
       }
     }
+
   }
 
   &-footer-cr {
+
+    @include media-query(mobile) {
+      margin-top: 20px;
+    }
 
     &-holder {
       display: flex;

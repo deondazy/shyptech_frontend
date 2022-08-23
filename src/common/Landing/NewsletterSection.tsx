@@ -61,7 +61,7 @@ export const NewsLetterSection: React.FC<{}> = () => {
 
             { email: state.email }
 
-        const response: any = await dispatch(authProcess(state?.isBusiness ? "subscribe-business" : "subscribe", body, true, true));
+        const response: any = await dispatch(authProcess(state?.isBusiness ? "subscribe-business" : "subscribe", body));
 
         setState((prevState) => ({ ...prevState, success: response, loading: false }));
 
@@ -127,7 +127,11 @@ export const NewsLetterSection: React.FC<{}> = () => {
 
     return (
 
-        <div className='landing-page-section-three landing-page-section-newsletter'>
+        <div
+
+            className='landing-page-section-three landing-page-section-newsletter'
+            id={"news-letter"}
+        >
 
             <div className='landing-page-section-three-div'>
 
@@ -136,9 +140,9 @@ export const NewsLetterSection: React.FC<{}> = () => {
                 <FormField
                     label='Email'
                     placeHolder={"input your email address"}
-                    value={state.success === true ? "Thanks!" : state.email}
+                    value={(state.success === true && !state.isBusiness) ? "Thanks!" : state.email}
                     onChange={(e: any) => onChanged(e, "email")}
-                    errorClass={state.success === true ? "success-mode" : undefined}
+                    errorClass={(state.success === true && !state.isBusiness) ? "success-mode" : undefined}
                     error={state.attempt > 0 && errorText}
                     {...extraProps}
                 />
@@ -198,13 +202,19 @@ export const NewsLetterSection: React.FC<{}> = () => {
 
                 <FormField
                     type="checkbox"
-                    label={"Are you a business ?"}
+                    label={"Delivery company / Agents ?"}
                     value={state.isBusiness === true}
-                    onChange={() => setState((prevState) => ({ ...prevState, isBusiness: !prevState.isBusiness }))}
+                    onChange={() =>
+
+                        (state.success !== true && !state.loading) &&
+
+                        setState((prevState) => ({ ...prevState, isBusiness: !prevState.isBusiness }))
+
+                    }
                 />
 
                 <Button
-                    label={state.success ? "You will be notified" : (state.loading ? "Please wait..." : "Register with us")}
+                    label={(state.success === true) ? "You will be notified" : (state.loading ? "Please wait..." : "Join")}
                     onClick={() => preProcess()}
                     disabled={disabled()}
                     className={state.success === true ? "button-success" : ""}
@@ -220,7 +230,7 @@ export const NewsLetterSection: React.FC<{}> = () => {
 
 type stateType = {
     fullName?: string,
-    error:{ [key: string] : {} },
+    error: { [key: string]: {} },
     isBusiness?: boolean,
     loading: boolean,
     attempt: number,

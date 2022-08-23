@@ -13,9 +13,9 @@ export const SectionFour: React.FC<{}> = () => {
             subtitle: "Expressly track your items without the need to log in or sign up."
         },
         {
-            title: "Convenience",
+            title: "Trustworthy",
             icon: trustworthy,
-            subtitle: "Expressly track your items without the need to log in or sign up."
+            subtitle: "Items are safely delivered to you by our trusted partner logistics companies."
         },
         {
             title: "Availability",

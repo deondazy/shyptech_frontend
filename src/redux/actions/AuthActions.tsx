@@ -126,7 +126,7 @@ export const authProcess = (
                 payload: { type, data }
             });
 
-            return data?.error?.message || false;
+            return data?.message || false;
         }
 
     };
