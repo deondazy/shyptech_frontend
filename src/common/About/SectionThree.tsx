@@ -12,11 +12,11 @@ export const AboutSectionThree: React.FC<{}> = () => {
             value: `hello@shypdeck.com`,
             link: "mailto:hello@shypdeck.com"
         },
-        {
-            title: "Phone",
-            value: `0(000) 000 0000`,
-            link: 'tel:0000***###'
-        },
+        // {
+        //     title: "Phone",
+        //     value: `0(000) 000 0000`,
+        //     link: 'tel:0000***###'
+        // },
         {
             title: "Connect with us",
             rightLinkIcon: Instagram,

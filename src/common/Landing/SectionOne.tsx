@@ -6,7 +6,7 @@ export const SectionOne : React.FC<{}> = () => {
 
         <div className='landing-page-section-one'>
 
-            <h1> Your everyday choice for the safe delivery of your goods. </h1>
+            <h1> Your everyday choice for deliveries. </h1>
 
         </div>
 

@@ -101,7 +101,7 @@ export const IndividualSubscriptionForm: React.FC<{ onClose : () => void}> = ({ 
 
             <div>
 
-                <h1 className='mb-5'> Delivery Company / Agents </h1>
+                <h1 className='mb-5'> Business or Individual </h1>
 
                 <FormField
                     label='Email'

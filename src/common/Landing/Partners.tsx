@@ -9,14 +9,14 @@ export const Partners:React.FC<{}> = () => {
 
         <div className='landing-page-section-partners'>
 
-            <h1 className='color-dark'> Some of Our Partners </h1>
+            <h1 className='color-dark'> Brands That Trust Us </h1>
 
             <div className='landing-page-section-partners-part'>
 
+            <img src={TopShip} alt={"TopShip"} />                
+                
                 <img src={GIG} alt={"GIG"} />
                 
-                <img src={TopShip} alt={"TopShip"} />
-
                 <img src={Kwik} alt={"Kwik"} />
 
             </div>

@@ -16,13 +16,12 @@ export const SectionTwo: React.FC<{}> = () => {
                     <div className='landing-page-section-two-flex-left'>
 
                         <p>
-                            Shypdeck is a delivery service platform designed to make delivery exciting and
-                            convenient giving its users an awesome experience.
+                            At Shypdeck, your deliveries have just one job; to get delivered in good condition and within specified time frame.
+
                         </p>
 
                         <p>
-                            On shypdeck, you can access  well-known reliable logistics companies such as GiG,
-                            Topship and Kwik to care for all your logistic needs.
+                            We help you achieve this by providing access to an array of reliable delivery service providers ready to serve you.
                         </p>
 
                     </div>
