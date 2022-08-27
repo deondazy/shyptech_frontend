@@ -10,22 +10,23 @@ export const SectionFour: React.FC<{}> = () => {
         {
             title: "Convenience",
             icon: Convenience,
-            subtitle: "Expressly track your items without the need to log in or sign up."
+            subtitle: `We provide access to an array of delivery companies and agents on one platform.
+             You are able to do this without creating a personalized account or facing the hassles of logging in.`
         },
         {
             title: "Trustworthy",
             icon: trustworthy,
-            subtitle: "Items are safely delivered to you by our trusted partner logistics companies."
+            subtitle:`Items are delivered to you securely by our reliable and verified delivery service providers. Over here, you call the shots.`
         },
         {
             title: "Availability",
             icon: Availability,
-            subtitle: "Have access to our platform 24/7 for your logistic needs."
+            subtitle: `You can rest assured that we would make your delivery concerns work on any day. `
         },
         {
             title: "Responsiveness",
             icon: Responsiveness,
-            subtitle: "Need a platform that attends to your logistics needs swiftly? Shypdeck is your go-to platform."
+            subtitle: `Your deliveries are picked, dispatched and tracked swiftly. We boast of a real time feedback to complaints and inquiries. `
         }
     ]
 

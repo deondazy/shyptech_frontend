@@ -9,6 +9,7 @@ export * from './FormField/FormError';
 export * from './Head';
 export * from './Header/MobileHeaderToggler';
 export * from './Modal';
+export * from './official';
 export * from './Pagination';
 export * from './Transitions';
 export * from './ViewFormatter';

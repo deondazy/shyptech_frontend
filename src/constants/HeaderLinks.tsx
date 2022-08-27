@@ -6,6 +6,26 @@ export const leftLinks: typeOfHeaderItem[] = [
     // }
 ];
 
+export const mobileLinks: typeOfHeaderItem[] = [
+    {
+        "title": "Home",
+        "link": "/"
+    },
+    {
+        "title": "About",
+        "link": "/about"
+    },
+    {
+        "title": "Privacy Policy",
+        "link": "/policy"
+    },
+    {
+        "title": "Terms And Conditions",
+        "link": "/terms"
+    },
+
+];
+
 export const rightLinks: typeOfHeaderItem[] = [
     {
         "title": "Track Order",

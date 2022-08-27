@@ -9,7 +9,7 @@ export const Partners:React.FC<{}> = () => {
 
         <div className='landing-page-section-partners'>
 
-            <h1 className='color-dark'> Some of our Partners </h1>
+            <h1 className='color-dark'> Some of Our Partners </h1>
 
             <div className='landing-page-section-partners-part'>
 

@@ -11,10 +11,10 @@ interface FooterTypes {
 };
 
 export const SocialLinks = {
-    facebook: "https://www.facebook.com/haladigital/",
-    youtube: "https://www.youtube.com/channel/haladigital",
-    instagram: "https://www.instagram.com/haladigital",
-    twitter: "https://www.twitter.com/haladigital"
+    facebook: "https://www.facebook.com/",
+    youtube: "https://www.youtube.com/channel",
+    instagram: "https://www.instagram.com/shypdeck",
+    twitter: "https://www.twitter.com"
 }
 
 export const LandingFooterAbout: Array<FooterTypes> = [{
@@ -26,22 +26,18 @@ export const LandingFooterAbout: Array<FooterTypes> = [{
 
 export const LandingFooterServices: Array<FooterTypes> = [
     {
-        title: "Send Item",
-        link: "#"
-    },
-    {
-        title: "Track Order",
-        link: "#"
+        title: "Terms And Conditions",
+        link: "/terms"
     }
 ];
 
 export const LandingFooterCompany: Array<FooterTypes> = [
     {
         title: "About",
-        link: "#"
+        link: "/about"
     },
     {
         title: "Privacy Policy",
-        link: "#"
+        link: "/policy"
     }
 ];

@@ -30,6 +30,7 @@
 @import 'components/form-field/select';
 @import 'components/form-field/switch';
 @import 'components/modal';
+@import 'components/official';
 @import 'components/pagination';
 @import 'components/table';
 @import 'components/toast';
@@ -38,6 +39,7 @@
 
 //5. Pages
 @import 'pages/landing/landing';
+@import 'pages/landing/about';
 
 //6. Transitions
 @import 'transitions/content-loader';
@@ -50,4 +52,5 @@
 // 7. Vendors
 @import 'vendors/lite-picker';
 
-// 8. Color Schemes
+// 8. Common
+@import 'common/newsletter/newsletter-form';

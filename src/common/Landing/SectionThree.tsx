@@ -13,7 +13,6 @@ export const SectionThree: React.FC<{}> = () => {
 
                 <p>
                     Do you have a shipping company and want to earn more?
-                    Sit lacus massa amet, hendrerit. Mauris, tortor id pharetra, quisque varius hac commodo scelerisque id.
                 </p>
 
                 <Button

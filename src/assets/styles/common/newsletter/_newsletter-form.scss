@@ -1,0 +1,14 @@
+.newsletter-form {
+
+    h1 {
+
+        @include media-query(mobile) {
+            @include font-size(large);
+        }
+
+        text-align: center;
+        word-break: break-word;
+        color: color(primary);
+    }
+
+}

@@ -1,0 +1,72 @@
+.about-page {
+
+    &-section-two {
+
+        background: color(white);
+
+        h1 {
+            color: color(primary);
+        }
+
+        .landing-page-section-two-flex-left {
+
+            @media only screen and (min-width: 800px) {
+
+                margin-right: 20px;
+                max-width: 500px;
+
+            }
+
+        }
+
+    }
+
+    &-values,
+    &-contact-items {
+
+        padding-top: 0;
+
+        .view-formatter {
+            max-width: 730px;
+            cursor: unset !important;
+        }
+
+        p {
+            color: color(dark) !important;
+        }
+
+        .view-formatter-title-box p {
+            @include font-size-override(m-large);
+            font-family: $header-font;
+            font-weight: 600;
+            color: color(darker) !important;
+        }
+    }
+
+    &-social {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &-section-zero {
+
+        @include media-query(mobile) {
+
+            overflow-x: scroll;
+
+        }
+
+        display: flex;
+        justify-content: space-between;
+        padding-top: 66px;
+        padding-bottom: 0;
+
+        img {
+            margin: 0 5px;
+            width: calc(33.3333% - 10px);
+            min-width: 250px;
+        }
+
+    }
+
+}

@@ -49,11 +49,11 @@ const dispatchActions = (
 
         case "subscribe-business":
 
-        return ({
-            start: AuthActions.SUBSCRIBE_NEWSLETTER_BUSINESS_START,
-            success: AuthActions.SUBSCRIBE_NEWSLETTER_BUSINESS_SUCCESS,
-            failure: AuthActions.SUBSCRIBE_NEWSLETTER_BUSINESS_FAILURE
-        })
+            return ({
+                start: AuthActions.SUBSCRIBE_NEWSLETTER_BUSINESS_START,
+                success: AuthActions.SUBSCRIBE_NEWSLETTER_BUSINESS_SUCCESS,
+                failure: AuthActions.SUBSCRIBE_NEWSLETTER_BUSINESS_FAILURE
+            })
 
         default:
 
@@ -69,7 +69,16 @@ const dispatchActions = (
 
 export const authProcess = (
     type: "retrieve-reference" | "subscribe" | "retrieve-auth" | "subscribe-business",
-    body: { email?: string , reference?: string , userName?: string } = {},
+    body: {
+        email?: string,
+        reference?: string,
+        userName?: string,
+        personalName?: string,
+        businessName?: string,
+        phoneNumber?: string,
+        emailAddress?: string,
+        stateId?: string
+    } = {},
     returnData?: boolean | null,
     returnFullResponse?: boolean | null,
 
@@ -80,15 +89,15 @@ export const authProcess = (
 
             const isSubscribing = ["subscribe-business", "subscribe"].includes(type);
 
-            if ( !accessToken() && isSubscribing ) {
+            if (!accessToken() && isSubscribing) {
 
-                await (dispatch as any)(authProcess("retrieve-auth", { userName: "Awaal"}, true ));
+                await (dispatch as any)(authProcess("retrieve-auth", { userName: "Awaal" }, true));
 
             }
- 
-            if ( !referenceToken() && isSubscribing) {
 
-                await (dispatch as any)(authProcess("retrieve-reference", {} ,true ));
+            if (!referenceToken() && isSubscribing) {
+
+                await (dispatch as any)(authProcess("retrieve-reference", {}, true));
 
             }
 

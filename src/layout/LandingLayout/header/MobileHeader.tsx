@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { MobileHeaderToggler } from 'components';
-import { leftLinks, rightLinks } from 'constants/index';
+import { mobileLinks } from 'constants/index';
 import router from 'next/router';
 
-export const MobileHeader:React.FC<{ noRightLinks : boolean }> = ({ noRightLinks }): JSX.Element => {
+export const MobileHeader:React.FC<{ noRightLinks : boolean }> = ({ }): JSX.Element => {
 
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const links = noRightLinks ? [] : [...leftLinks, ...rightLinks];
+    const links = mobileLinks;
 
     return (
         <div className="landingLayout-header-mobile">

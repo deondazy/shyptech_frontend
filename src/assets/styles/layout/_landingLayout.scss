@@ -7,7 +7,10 @@
 
 
     &-body {
-      @extend %body-width-and-padding;
+
+      @include media-query(mobile) {
+        padding-top: 63px;
+      }
 
       &.default {
         margin: unset !important;
@@ -23,7 +26,7 @@
       @media only screen and (max-width: 1400px) {
         padding: 30px 62px;
       }
-  
+
       @include media-query(mobile) {
         box-shadow: $header-shadow;
         padding: 25px 62px;
@@ -40,6 +43,10 @@
       background: color(white);
       transition: padding 0.2s;
       transition-timing-function: ease;
+
+      &.with-shades {
+        border-bottom: 1px solid color(lighter-primary);
+      }
   
       &-holder {
         @media only screen and (min-width: 1401px) {
@@ -121,7 +128,7 @@
           display: flex;
           align-items: center;
           justify-content: space-between;
-          box-shadow: 0 4px 7px rgba(0, 0, 0, 0.05);
+          border-bottom: 1px solid color(lighter-primary);
           padding: 25px 25px 17px;
 
           i {

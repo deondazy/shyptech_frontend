@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { LandingLayout } from 'layout';
 import { SectionOne } from 'common/Landing/SectionOne';
 import { SectionTwo } from 'common/Landing/SectionTwo';
-import { SectionThree } from 'common/Landing/SectionThree';
 import { SectionFour } from 'common/Landing/SectionFour';
 import { NewsLetterSection } from 'common/Landing/NewsletterSection';
 import { useDispatch } from 'react-redux';
@@ -56,8 +55,6 @@ const Home: React.FC<Props> = ({ isMobile, deviceWidth }) => {
             <Partners />
 
             <SectionTwo />
-
-            <SectionThree />
 
             <SectionFour />
 

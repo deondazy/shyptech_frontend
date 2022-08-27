@@ -8,8 +8,7 @@
     }
 
     @include media-query(mobile) {
-      padding-top: 210px !important;
-      padding-bottom: 130px !important;
+      padding: 210px 10px 130px !important;
       height: unset;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/sectionOne_img_mobile.png);
 
@@ -30,6 +29,11 @@
     background-size: cover;
 
     h1 {
+
+      @include media-query(mobile) {
+        line-height: 1.8;
+      }
+
       @include font-size(xxx-large);
       max-width: 950px;
       text-align: center;
@@ -71,7 +75,13 @@
       }
 
       &-left p {
+
         line-height: 1.8;
+
+        &:first-child {
+          margin-top: 0 !important;
+        }
+
       }
 
       &-left p:last-child {
@@ -128,6 +138,44 @@
   &-section-newsletter {
 
     padding-bottom: 60px !important;
+
+    &-buttons {
+
+      @include media-query(mobile) {
+        flex-wrap: wrap;
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      .button:first-child {
+
+        @include media-query(mobile) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        margin-right: 23px;
+        background: color(lighter-primary);
+        color: color(primary);
+
+      }
+
+    }
+
+    h1 {
+      @include font-size-override(x-large);
+    }
+
+    .landing-page-section-three-div {
+      max-width: 610px;
+    }
+
+    p {
+      line-height: 1.9 !important;
+    }
 
     .form-field-title {
       text-align: left;
@@ -238,6 +286,11 @@
         padding: 36px 1.5%;
         min-width: 25%;
         max-width: 25%;
+
+        p {
+          @include font-size(regular);
+        }
+
       }
 
       &-item img {

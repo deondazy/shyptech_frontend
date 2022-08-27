@@ -1,7 +1,4 @@
 .modal {
-  @media only screen and (max-width: 1400px) {
-    max-width: 500px;
-  }
 
   @media only screen and (min-width: 350px) {
     min-width: 300px;
@@ -17,11 +14,16 @@
     max-width: 95%;
   }
 
+  @media only screen and (min-width: 1000px) {
+    min-width: 651px;
+    max-width: 651px;
+  }
+
   position: relative;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 0;
 
-  width: 490px;
+  width: 100%;
   background: white;
 
   &.large {
@@ -79,17 +81,17 @@
   &_body {
 
     @media only screen and (max-width: 1400px) {
-      padding: 20px 32px 32px;
+      padding: 120px 36px 44px;
     }
 
     @include media-query(mobile) {
-      padding: 20px 20px 30px;
+      padding: 92px 20px 16px;
     }
 
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 20px 40px 40px;
+    padding: 142px 36px 64px;
   }
 
   &-top-icon {
@@ -158,8 +160,8 @@
   &-exit {
     z-index: 1;
     position: absolute;
-    top: 22px;
-    right: 30px;
+    top: 74px;
+    right: 36px;
     cursor: pointer;
     font-size: 20px;
   }
@@ -171,56 +173,6 @@
       padding-top: 80px;
     }
 
-  }
-
-  &-holder.settings-modal-holder {
-    @include media-query(non-pc) {
-      padding: 0;
-    }
-    display: block;
-    justify-content: flex-end;
-
-    .modal_body {
-      width: 100%;
-      transition: 0.2s ease;
-    }
-
-    .modal {
-      @include media-query('tablet') {
-        width: 70%;
-      }
-      @include media-query('mobile') {
-        width: 100%;
-        max-width: 100%;
-      }
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      margin-left: auto;
-      border-radius: 0;
-      width: 40%;
-      max-width: 490px;
-      min-height: 100vh;
-
-      &-default-alignment {
-        justify-content: flex-start !important;
-
-        .modal-legend {
-          @include media-query(mobile) {
-            margin-top: 20px;
-          }
-          margin-top: 65px;
-        }
-      }
-    }
-
-    & .__parent {
-      @include media-query('mobile') {
-        justify-content: unset;
-        padding-top: 70px;
-      }
-      justify-content: center;
-    }
   }
 
   &-centered > .modal_body {
