@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import Link from 'next/link';
 import LinkedIn from 'assets/svg/social/linkedIn.svg';
+import { SocialLinks } from 'constants/index';
 
 const LandingLayoutFooterCr: FunctionComponent = () => {
 
@@ -9,11 +9,9 @@ const LandingLayoutFooterCr: FunctionComponent = () => {
 
             <div className="landingLayout-footer-cr-holder">
 
-                <Link href={"/"}>
-                    <a>
+                    <a href={SocialLinks.instagram} target="blank">
                         <img src={LinkedIn} alt={"shypdeck linkedIn"} />
                     </a>
-                </Link>
 
                 <p> ©{new Date().getFullYear()} Shypdeck. All rights reserved </p>
 

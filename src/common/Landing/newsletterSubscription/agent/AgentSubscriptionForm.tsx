@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, FormError, FormField } from 'components';
 import { change, errorItem, getPredefinedErrors, quickValidation } from 'utils';
 import { useDispatch } from 'react-redux';
-import { authProcess } from 'redux/actions';
+import { authProcess, resetApp } from 'redux/actions';
 import { useSelector } from 'react-redux';
 import { storeInterface } from 'types';
 import { FormFieldPhoneBox } from 'components/FormField/PhoneBox';
@@ -84,7 +84,9 @@ export const AgentSubscriptionForm: React.FC<{ onClose : () => void}> = ({ onClo
 
                 onClose();
 
-            }, 10000);
+                dispatch(resetApp());
+
+            }, 5000);
         }
 
         // eslint-disable-next-line

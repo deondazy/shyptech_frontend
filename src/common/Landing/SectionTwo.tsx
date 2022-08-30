@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionTwoImg from 'assets/png/landing/sectionTwo_img.png';
+import SectionTwoImg from 'assets/png/landing/about/about-side.png';
 
 export const SectionTwo: React.FC<{}> = () => {
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Logo from "assets/png/shydeck/logo_blue.png";
 
 export const MobileHeaderToggler: React.FC<Props> = ({ setExpansion, isExpanded }): JSX.Element => {
 
@@ -9,7 +10,7 @@ export const MobileHeaderToggler: React.FC<Props> = ({ setExpansion, isExpanded 
 
             <Link href={"/"}>
                 <a>
-                    {/* <img src={StellasLogo} alt={"stellas"} /> */}
+                    <img src={Logo} alt={"shypdeck"} />
                 </a>
             </Link>
 

@@ -25,6 +25,19 @@ export const renewAuthToken = async () => {
     }
 }
 
+export const resetApp = () => async (dispatch: typeOfDispatch) => {
+    try {
+        dispatch({ type: AuthActions.RESET_APP_START });
+        dispatch({ type: AuthActions.RESET_APP });
+        dispatch({ type: AuthActions.RESET_APP_SUCCESS });
+        return true;
+
+    } catch (error: any) {
+        dispatch({ type: AuthActions.RESET_APP_FAILURE });
+    }
+}
+
+
 const dispatchActions = (
     type?: "retrieve-reference" | "retrieve-auth" | "subscribe" | "subscribe-business",
 ) => {
@@ -139,15 +152,3 @@ export const authProcess = (
         }
 
     };
-
-export const resetApp = () => async (dispatch: typeOfDispatch) => {
-    try {
-        dispatch({ type: AuthActions.RESET_APP_START });
-        dispatch({ type: AuthActions.RESET_APP });
-        dispatch({ type: AuthActions.RESET_APP_SUCCESS });
-        return true;
-
-    } catch (error: any) {
-        dispatch({ type: AuthActions.RESET_APP_FAILURE });
-    }
-}

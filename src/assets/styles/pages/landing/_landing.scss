@@ -10,7 +10,7 @@
     @include media-query(mobile) {
       padding: 210px 10px 130px !important;
       height: unset;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/sectionOne_img_mobile.png);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 34%)), url(/assets/sectionOne_img_mobile.png);
 
       h1 {
         @include font-size-override(xx-large);
@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
     height: 440px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/sectionOne_img_.png);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 34%)), url(/assets/sectionOne_img_.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -206,7 +206,7 @@
     &-part {
 
       @include media-query(mobile) {
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
       }
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, FormError, FormField } from 'components';
 import { change, errorItem, getPredefinedErrors, quickValidation } from 'utils';
 import { useDispatch } from 'react-redux';
-import { authProcess } from 'redux/actions';
+import { authProcess, resetApp } from 'redux/actions';
 
 export const IndividualSubscriptionForm: React.FC<{ onClose : () => void}> = ({ onClose }) => {
 
@@ -46,7 +46,7 @@ export const IndividualSubscriptionForm: React.FC<{ onClose : () => void}> = ({ 
 
         {
            
-            "emailAddress": state?.email,
+            "email": state?.email,
 
         };
 
@@ -76,8 +76,10 @@ export const IndividualSubscriptionForm: React.FC<{ onClose : () => void}> = ({ 
             setTimeout(() => {
 
                 onClose();
+                
+                dispatch(resetApp());
 
-            }, 10000);
+            }, 5000);
         }
 
         // eslint-disable-next-line
