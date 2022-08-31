@@ -99,12 +99,14 @@
       &-right {
 
         @include media-query(pc-low-resolution) {
-          max-width: 500px;
+          max-width: 450px;
         }
 
         @include media-query(mobile) {
           margin-top: 36px;
         }
+
+        width: 50%;
 
         img {
           width: 100%;
@@ -250,7 +252,7 @@
     @extend %body-width-and-padding;
 
     &-heading {
-      margin-bottom: 36px;
+      margin-bottom: 10px;
       width: max-content;
 
       h1 {
@@ -285,15 +287,9 @@
 
         @include media-query(mobile) {
           margin-right: 0;
+          padding: 20px 1.5%;
           min-width: unset;
           max-width: 350px;
-
-
-          &:not(:first-child) {
-
-            margin-top: 60px;
-
-          }
 
         }
 
