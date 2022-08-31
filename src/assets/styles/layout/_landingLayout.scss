@@ -194,14 +194,14 @@
     &-footer {
 
       @include media-query('pc-low-resolution') {
-        padding-top: 40px;
+        padding-top: 15px;
       }
 
       @include media-query('mobile') {
-        padding-top: 32px;
+        padding-top: 15px;
       }
 
-      padding-top: 70px;
+      padding-top: 15px;
       background: color(primary);
 
       &-holder {
@@ -219,18 +219,18 @@
         width: 100%;
 
         &:first-of-type {
-          margin-bottom: 50px;
+          // margin-bottom: 50px;
           max-width: unset !important;
         }
 
-        &:not(:first-child) {
-          margin-top: 20px;
-        }
+        // &:not(:first-child) {
+        //   margin-top: 20px;
+        // }
 
       }
 
       margin-right: 10px;
-      margin-bottom: 30px;
+      // margin-bottom: 30px;
       max-width: 80%;
 
       &:first-child,

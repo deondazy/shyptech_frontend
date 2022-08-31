@@ -1,14 +1,15 @@
 import React, { FunctionComponent } from 'react';
 import { FooterLinks, FooterIconSet, FooterLogoField, FooterLocation } from 'components';
-import { LandingFooterAbout, LandingFooterServices, LandingFooterCompany } from 'constants/index';
+import { LandingFooterServices, LandingFooterCompany } from 'constants/index';
 import LandingLayoutFooterCr from '../LandingLayoutFooterCr';
 
 const LandingLayoutFooter: FunctionComponent = () => {
 
     const footerTabs = [
-        { title: undefined, tab: LandingFooterAbout },
+        // { title: undefined, tab: LandingFooterAbout },
         { title: "Services", tab: LandingFooterServices },
-        { title: "Company", tab: LandingFooterCompany },
+        { title: "Company", tab: [LandingFooterCompany[0]] },
+        { title: "Policy", tab: [LandingFooterCompany[1]] },
     ];
 
     return (
@@ -21,7 +22,6 @@ const LandingLayoutFooter: FunctionComponent = () => {
                     <div key={`footer-tab-item-${index}`}
                         className="landingLayout-footer-tab">
                         <>
-                            {item.title && <h1> {item.title} </h1>}
 
                             {item.tab.map((tabItem, tabItemIndex) =>
 

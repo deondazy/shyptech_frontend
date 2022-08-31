@@ -62,8 +62,7 @@ input {
   user-select: none;
 }
 
-
 p {
   @include font-size(medium);
-  line-height: 1.5;
+  line-height: 1.8;
 }

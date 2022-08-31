@@ -11,6 +11,9 @@
       padding: 210px 10px 130px !important;
       height: unset;
       background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 34%)), url(/assets/sectionOne_img_mobile.png);
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
 
       h1 {
         @include font-size-override(xx-large);
@@ -27,7 +30,7 @@
     height: 440px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 34%)), url(/assets/sectionOne_img_.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
 
     h1 {
@@ -78,6 +81,9 @@
 
       &-left p {
 
+        padding-right: 10px;
+        max-width: 500px;
+
         line-height: 1.8;
 
         &:first-child {
@@ -93,7 +99,7 @@
       &-right {
 
         @include media-query(pc-low-resolution) {
-          max-width: 350px;
+          max-width: 500px;
         }
 
         @include media-query(mobile) {

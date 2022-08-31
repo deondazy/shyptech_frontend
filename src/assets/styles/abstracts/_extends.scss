@@ -28,22 +28,18 @@
 
 %body-width-and-padding {
   @media only screen and (max-width: 1400px) {
-    padding: 85px 62px;
-  }
-
-  @include media-query(mobile) {
-    padding: 75px 62px;
+    padding: 35px 62px;
   }
 
   @include media-query('small-tablet') {
-    padding: 70px;
+    padding: 35px 30px;
   }
 
   @include media-query('mobile') {
-    padding: 70px 20px;
+    padding: 30px 20px;
   }
 
   margin: auto;
-  padding: 100px 124px;
+  padding: 45px 124px;
   max-width: 1500px;
 }

@@ -10,7 +10,7 @@ export const IndividualSubscription = () => {
         <>
 
             <Button
-                label={"Business or Individual"}
+                label={"Business/Individual"}
                 onClick={() => setVisibility(true)}
             />
 
