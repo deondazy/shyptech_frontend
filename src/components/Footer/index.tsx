@@ -18,17 +18,21 @@ export const FooterLogoField: FC<FooterLogoProps> = ({ logo, alt }) => {
     );
 }
 
-export const FooterIconSet: FC<{ icons: string[] , links?: string[] }> = ({ icons , links }) => {
+export const FooterIconSet: FC<{ icons: string[] , links?: string[], texts?: string[] }> = ({ icons , links, texts }) => {
     return (
         <div className="footer-icon-set">
             {icons.map((icon, index) =>
                 <a 
                     key={`social-image-${index}`}
                     href={links?.[index] || ""}>
+                    
                     {icon.includes("<svg") ?
                         <div dangerouslySetInnerHTML={{ __html: icon }} role={"button"} /> :
                         <img src={icon} alt={`social-image-${index}`} role={"button"} />
                     }
+
+                    {texts?.[index] && <p> {texts?.[index]} </p>}
+
                 </a>)
             }
         </div>

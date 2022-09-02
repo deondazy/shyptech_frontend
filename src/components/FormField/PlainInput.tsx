@@ -110,6 +110,8 @@ export const PlainInput: React.FC<Props> = (
                 readOnly={props.readonly || false}
                 onKeyDown={(e) => props.onKeyDown && props.onKeyDown(e)}
                 onClick={() => typeof onClick === "function" && onClick()}
+                onFocus={() => props.onFocus && props.onFocus()}
+                onBlur={() => props.onBlur && props.onBlur()}
                 {... (type !== "password" && { value })}
             />
 
@@ -155,4 +157,6 @@ interface Props {
     withButton?: { label: string, onClick?(): void, className?: string, disabled?: boolean },
     withLabelButton?: { label: string, onClick?(): void, className?: string, disabled?: boolean },
     withExtraLabelComponent?: React.FC | React.ReactElement,
+    onFocus?: () => void,
+    onBlur?: () => void
 }

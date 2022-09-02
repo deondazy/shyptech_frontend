@@ -26,7 +26,7 @@ export const AboutSectionTwo: React.FC<{}> = () => {
 
             <div className='landing-page-section-two about-page-values'>
 
-                {items.map((item) => <ViewFormatter key={item.title} {...item} />)}
+                {items.map((item) => <ViewFormatter key={item.title} {...item} wrapperClass="pl-0 pr-0 pt-0" />)}
 
             </div>
 

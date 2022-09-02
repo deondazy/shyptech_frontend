@@ -41,6 +41,8 @@ $default-font-size: 14px;
 
 $inputBorder: 1px solid map-get($colors, light-primary);
 
+$focusedBorder: 1px solid map-get($colors, primary);
+
 $checkBoxBorder: 1px solid map-get($colors, light-primary);
 
 $normal-font-sizes: (
@@ -61,7 +63,7 @@ $small-font-sizes: (
   x-small: 10px,
   small: 12.5px,
   regular: 14px,
-  medium: 16px,
+  medium: 16.9px,
   large: 20.5px,
   m-large: 23.5px,
   x-large: 28.5px,

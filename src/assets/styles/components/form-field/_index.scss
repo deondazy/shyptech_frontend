@@ -116,9 +116,8 @@
       background-color: lighten(color(dark), 65);
     }
 
-    &:hover,
     &:focus {
-      border: $inputBorder;
+      border: $focusedBorder;
     }
   }
 

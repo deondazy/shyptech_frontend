@@ -20,6 +20,8 @@ export const FormFieldPhoneBox: React.FC<Props> = (
 
     const [country, setCountry] = useState<countryItemType>();
 
+    const [focus, setFocus] = useState(false);
+
     const { util: { countries } }: storeInterface = useSelector((store: storeInterface) => store);
 
     const countryList = countries.data.map(
@@ -62,7 +64,7 @@ export const FormFieldPhoneBox: React.FC<Props> = (
 
             {label && <p className='form-field-title text-left'> {label} </p>}
 
-            <div className={classnames('form-field-phone-box', className)}>
+            <div className={classnames('form-field-phone-box', className, focus && "mock-border")}>
 
                 <FormField
                     type="option"
@@ -80,6 +82,8 @@ export const FormFieldPhoneBox: React.FC<Props> = (
                     onChange={(e: any) => onChange && onChange(e)}
                     className={classnames(props.phoneClassName , "mb-0")}
                     disabled={props.disabled}
+                    onFocus={()=> setFocus(true)}
+                    onBlur={()=> setFocus(false)}
                     onKeyDown={(e: React.KeyboardEvent) => props.onKeyDown && props.onKeyDown(e)}
                 />
 

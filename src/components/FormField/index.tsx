@@ -84,5 +84,7 @@ interface Props {
     shouldAutoFocus?: boolean,
     minDate?: Date,
     alignIconToLeft?: boolean,
-    withBorder?: boolean
+    withBorder?: boolean,
+    onFocus?: () => void,
+    onBlur?: () => void
 }

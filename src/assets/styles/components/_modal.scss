@@ -81,17 +81,17 @@
   &_body {
 
     @media only screen and (max-width: 1400px) {
-      padding: 120px 36px 44px;
+      padding: 80px 36px 44px;
     }
 
     @include media-query(mobile) {
-      padding: 92px 20px 16px;
+      padding: 68px 20px 16px;
     }
 
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding: 142px 36px 64px;
+    padding: 102px 36px 64px;
   }
 
   &-top-icon {
@@ -160,7 +160,7 @@
   &-exit {
     z-index: 1;
     position: absolute;
-    top: 74px;
+    top: 54px;
     right: 36px;
     cursor: pointer;
     font-size: 20px;

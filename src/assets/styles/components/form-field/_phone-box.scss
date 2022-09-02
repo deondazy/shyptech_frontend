@@ -2,6 +2,18 @@
     display: flex;
     justify-content: space-between;
 
+    &.mock-border {
+
+      input {
+        border-color: color(primary) !important;
+      }
+
+      .select {
+        border-color: color(primary) !important;
+      }
+
+    }
+
     .form-field:first-child {
       width: 115px;
     }
@@ -20,8 +32,8 @@
 
     .form-field .select,
     .form-field .select:hover {
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+        border-top-right-radius: 1px;
+        border-bottom-right-radius: 1px;
         border-right: 0;
     }
 
@@ -31,6 +43,11 @@
       input {
         border-top-left-radius: 1px;
         border-bottom-left-radius: 1px;
+
+        &:focus {
+          border: $inputBorder;
+        }
+
       }
 
     }

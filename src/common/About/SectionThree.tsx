@@ -10,7 +10,8 @@ export const AboutSectionThree: React.FC<{}> = () => {
         {
             title: "Email",
             value: `hello@shypdeck.com`,
-            link: "mailto:hello@shypdeck.com"
+            link: "mailto:hello@shypdeck.com",
+            wrapperClass: "pl-0 pr-0 pt-0"
         },
         // {
         //     title: "Phone",
@@ -20,7 +21,7 @@ export const AboutSectionThree: React.FC<{}> = () => {
         {
             title: "Connect with us",
             rightLinkIcon: Instagram,
-            wrapperClass: "about-page-social",
+            wrapperClass: "about-page-social pl-0 pr-0",
             externalLink: SocialLinks.instagram
         },
     ];

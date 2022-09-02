@@ -1,15 +1,14 @@
 import React, { FunctionComponent } from 'react';
 import { FooterLinks, FooterIconSet, FooterLogoField, FooterLocation } from 'components';
-import { LandingFooterServices, LandingFooterCompany } from 'constants/index';
+import { LandingFooterAbout, LandingFooterServices, LandingFooterCompany } from 'constants/index';
 import LandingLayoutFooterCr from '../LandingLayoutFooterCr';
 
 const LandingLayoutFooter: FunctionComponent = () => {
 
     const footerTabs = [
-        // { title: undefined, tab: LandingFooterAbout },
-        { title: "Services", tab: LandingFooterServices },
-        { title: "Company", tab: [LandingFooterCompany[0]] },
-        { title: "Policy", tab: [LandingFooterCompany[1]] },
+        { title: "Contact", tab: LandingFooterAbout },
+        { title: "Explore", tab: LandingFooterServices },
+        { title: "Follow us", tab: LandingFooterCompany },
     ];
 
     return (
@@ -22,6 +21,7 @@ const LandingLayoutFooter: FunctionComponent = () => {
                     <div key={`footer-tab-item-${index}`}
                         className="landingLayout-footer-tab">
                         <>
+                            {item.title && <h1> {item.title} </h1>}
 
                             {item.tab.map((tabItem, tabItemIndex) =>
 
@@ -31,7 +31,17 @@ const LandingLayoutFooter: FunctionComponent = () => {
                                         <FooterLogoField logo={tabItem.logo} alt={"stellas"} />
                                     }
 
-                                    {tabItem.icons && <FooterIconSet icons={tabItem.icons || []} links={tabItem.iconLinks} />}
+                                    {tabItem.icons &&
+
+                                        <FooterIconSet
+
+                                            icons={tabItem.icons || []}
+
+                                            links={tabItem.iconLinks}
+
+                                            texts={tabItem.iconsTexts}
+
+                                        />}
 
                                     {tabItem?.link && <FooterLinks link={tabItem.link || ''} title={tabItem.title || ''} />}
 
@@ -46,9 +56,10 @@ const LandingLayoutFooter: FunctionComponent = () => {
 
                 )}
 
-                <LandingLayoutFooterCr />
-
             </div>
+
+            <LandingLayoutFooterCr />
+
 
         </div>
     );

@@ -3,6 +3,7 @@
 
   &-link {
     display: block;
+    word-wrap: break-word;
   }
 
   &-logo {
@@ -32,13 +33,14 @@
       justify-content: center;
       border-radius: 100%;
       padding: 0;
-      width: 25px;
-      height: 25px;
-      background: rgba(0, 0, 0, 0.1);
 
       &:not(:last-child) {
         margin-right: 15px;
       }
+    }
+
+    p {
+      margin-left: 10px !important;
     }
 
     div {
@@ -50,7 +52,7 @@
 
   p,
   a {
-    @include font-size(large);
+    @include font-size(regular);
     margin: 6px 0;
     line-height: 1.7;
   }
@@ -71,7 +73,7 @@
   }
 
   h1 {
-    @include font-size(regular);
+    @include font-size(medium);
     margin-bottom: 10px;
     color: white;
   }
