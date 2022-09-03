@@ -42,6 +42,11 @@ export const validateFullName: (name: string) => boolean = (name) => {
     return name.match(re) ? false : true;
 }
 
+export const validateName: (name: string) => boolean = (name) => {
+    const re = /^[a-zA-Z '.-]*$/;
+    return name.match(re) ? false : true;
+}
+
 export const hasWhiteSpace: (s: string) => boolean = (s) => {
     const re = /[\s/g]/;
     return re.test(s) === true;

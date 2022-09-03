@@ -56,8 +56,8 @@ export const FormFieldPhoneBox: React.FC<Props> = (
             setCountry(countries.data[0]);
 
         }
-
-    }, [countries?.data]);
+    // eslint-disable-next-line
+    }, [countries?.data?.length]);
 
     return (
         <div className='form-field'>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { LandingLayout } from 'layout';
 import { SectionOne } from 'common/Landing/SectionOne';
 import { SectionTwo } from 'common/Landing/SectionTwo';
@@ -14,19 +14,27 @@ const Home: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
     const dispatch = useDispatch();
 
+    const [beep, setBeep] = useState(0);
+
     const getCountriesAndCities = async () => {
 
         const availability = accessToken();
 
-        if ( !availability ) {
+        if (!availability) {
 
-            await dispatch(authProcess("retrieve-auth", { userName: "Awaal"}, true ));
+            await dispatch(authProcess("retrieve-auth", { userName: "Awaal" }, true));
 
         }
 
-        dispatch(getAddressInfo("retrieve-countries", {}));
+        const zero = await dispatch(getAddressInfo("retrieve-countries", {}));
 
-        dispatch(getAddressInfo("retrieve-states", { id: "1" }))
+        const one = await dispatch(getAddressInfo("retrieve-states", { id: "1" }));
+
+        if (!zero || !one) {
+
+            setBeep(prevState => (prevState + 1));
+
+        }
 
     }
 
@@ -35,7 +43,7 @@ const Home: React.FC<Props> = ({ isMobile, deviceWidth }) => {
         getCountriesAndCities();
 
         // eslint-disable-next-line
-    }, []);
+    }, [beep]);
 
     return (
 

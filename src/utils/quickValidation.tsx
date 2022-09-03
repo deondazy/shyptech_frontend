@@ -1,6 +1,6 @@
 import {
     validateEmail, validateMobile, validateFullName, isNumber, containsLowerCase,
-    containsUpperCase, containsNumeric
+    containsUpperCase, containsNumeric, validateName
 } from "utils/index";
 
 export const quickValidation = (
@@ -271,9 +271,15 @@ export const quickValidation = (
 
     }
 
-    if (["fullName", "otp"].includes(field)) {
+    if (["otp"].includes(field)) {
 
         if (!validateFullName(value)) error.push("Field contains invalid characters");
+
+    }
+
+    if (["fullName"].includes(field)) {
+
+        if (validateName(value)) error.push("Field contains invalid characters");
 
     }
 

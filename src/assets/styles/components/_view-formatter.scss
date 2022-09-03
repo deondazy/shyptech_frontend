@@ -4,8 +4,6 @@
   &-wrapper-box {
     display: flex;
     align-items: center;
-    // margin-bottom: 25px;
-    // box-shadow: 0 0 20px rgba(0, 0, 0, 0.0523656);
     border-radius: 10px;
     padding: 15px;
 
@@ -93,8 +91,6 @@
     &.view-formatter-p {
       @include font-size-override(medium);
       margin-bottom: 5px;
-      // text-transform: capitalize;
-      font-weight: 500;
     }
 
     &:last-child:not(&.view-formatter-p) {
@@ -123,11 +119,6 @@
   &.classic {
     display: flex;
     align-items: center;
-    // padding: 18px 14px;
-
-    // &:not(:first-child) {
-    //   margin: 25px 0;
-    // }
 
     p:first-child {
       font-weight: 500;
@@ -189,7 +180,6 @@
 
   &.collapsible {
     position: relative;
-    // padding-top: 20px;
     cursor: pointer;
 
     .collapsible-icon {
