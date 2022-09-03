@@ -103,6 +103,11 @@
         }
 
         @include media-query(mobile) {
+          width: 100%;
+          max-width: 480px;
+        }
+
+        @include media-query(mobile) {
           margin-top: 36px;
         }
 
