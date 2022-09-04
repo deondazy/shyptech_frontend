@@ -52,6 +52,9 @@ export const getAddressInfo = (
 
         dispatch({ type: dispatchTypes.failure, payload: data });
 
-        return { message: data?.error?.message, status: false };
+        // return { message: data?.error?.message, status: false };
+
+        return false;
+
     }
 };

@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 import { storeInterface } from 'types';
 import { FormFieldPhoneBox } from 'components/FormField/PhoneBox';
 
-export const AgentSubscriptionForm: React.FC<{ onClose : () => void}> = ({ onClose }) => {
+export const AgentSubscriptionForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
     const dispatch = useDispatch();
 
@@ -80,6 +80,7 @@ export const AgentSubscriptionForm: React.FC<{ onClose : () => void}> = ({ onClo
     useEffect(() => {
 
         if (state.success === true) {
+
             setTimeout(() => {
 
                 onClose();
@@ -92,7 +93,8 @@ export const AgentSubscriptionForm: React.FC<{ onClose : () => void}> = ({ onClo
         // eslint-disable-next-line
     }, [state.success]);
 
-    const errorText = typeof state.success === "string" ? state.success : errorItem(state?.error || {}, "email");
+    const errorText = (state.success === true) ? "You will be notified via email" :
+        typeof state.success === "string" ? state.success : undefined;
 
     const extraProps = {
         className: "",
@@ -117,7 +119,7 @@ export const AgentSubscriptionForm: React.FC<{ onClose : () => void}> = ({ onClo
                     placeHolder={"input your email address"}
                     value={state.email}
                     onChange={(e: any) => onChanged(e, "email")}
-                    error={state.attempt > 0 &&  errorItem(state?.error || {}, "email")}
+                    error={state.attempt > 0 && errorItem(state?.error || {}, "email")}
                     {...extraProps}
                 />
 
@@ -161,10 +163,14 @@ export const AgentSubscriptionForm: React.FC<{ onClose : () => void}> = ({ onClo
                     {...extraProps}
                 />
 
-                <FormError text={errorText} condition={ typeof state.success === "string"} />
+                <FormError
+                    text={errorText || ""}
+                    condition={(typeof state.success === "string" || state.success === true) && errorText !== undefined}
+                    className={state.success === true ? "newsletter-form-success" : undefined}
+                />
 
                 <Button
-                    label={(state.success === true) ? "You will be notified" : (state.loading ? "Please wait..." : "Join")}
+                    label={(state.success === true) ? "Success" : (state.loading ? "Please wait..." : "Join")}
                     onClick={() => preProcess()}
                     disabled={disabled()}
                     className={state.success === true ? "button-success" : ""}

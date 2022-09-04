@@ -4,7 +4,7 @@ import { change, errorItem, getPredefinedErrors, quickValidation } from 'utils';
 import { useDispatch } from 'react-redux';
 import { authProcess, resetApp } from 'redux/actions';
 
-export const IndividualSubscriptionForm: React.FC<{ onClose : () => void}> = ({ onClose }) => {
+export const IndividualSubscriptionForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
     const dispatch = useDispatch();
 
@@ -45,7 +45,7 @@ export const IndividualSubscriptionForm: React.FC<{ onClose : () => void}> = ({ 
         const body =
 
         {
-           
+
             "email": state?.email,
 
         };
@@ -85,7 +85,8 @@ export const IndividualSubscriptionForm: React.FC<{ onClose : () => void}> = ({ 
         // eslint-disable-next-line
     }, [state.success]);
 
-    const errorText = typeof state.success === "string" ? state.success : errorItem(state?.error || {}, "email");
+    const errorText = (state.success === true) ? "You will be notified via email" :
+        typeof state.success === "string" ? state.success : undefined;
 
     const extraProps = {
         className: "",
@@ -110,14 +111,18 @@ export const IndividualSubscriptionForm: React.FC<{ onClose : () => void}> = ({ 
                     placeHolder={"input your email address"}
                     value={state.email}
                     onChange={(e: any) => onChanged(e, "email")}
-                    error={state.attempt > 0 &&  errorItem(state?.error || {}, "email")}
+                    error={state.attempt > 0 && errorItem(state?.error || {}, "email")}
                     {...extraProps}
                 />
 
-                <FormError text={errorText} condition={ typeof state.success === "string"} />
+                <FormError
+                    text={errorText || ""}
+                    condition={(typeof state.success === "string" || state.success === true) && errorText !== undefined}
+                    className={state.success === true ? "newsletter-form-success" : undefined}
+                />
 
                 <Button
-                    label={(state.success === true) ? "You will be notified" : (state.loading ? "Please wait..." : "Join")}
+                    label={(state.success === true) ? "Success" : (state.loading ? "Please wait..." : "Join")}
                     onClick={() => preProcess()}
                     disabled={disabled()}
                     className={state.success === true ? "button-success" : ""}

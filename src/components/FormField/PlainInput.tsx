@@ -29,8 +29,19 @@ export const PlainInput: React.FC<Props> = (
     const passwordType = visibility === true ? "text" : "password";
 
     const change = (val: any) => {
+
+        if ((onlyNumber && isNumber(val) === false) && val !== "") {
+
+            if (!value && onChange) onChange("");
+
+            return;
+
+        }
+
         if (onChange) {
-            if ((onlyNumber && isNumber(val)) || (!onlyNumber && true) || val === "") onChange(val);
+
+            onChange(val);
+
         }
     };
 

@@ -12,4 +12,20 @@
         color: color(primary);
     }
 
+    &-success {
+
+        padding-top: 20px !important;
+        padding-bottom: 20px;
+
+        small {
+
+            @include font-size(small);
+            width: 100%;
+            text-align: center;
+            color: color(primary);
+
+        }
+
+    }
+
 }

@@ -17,11 +17,11 @@ const allReducers = combineReducers({
 
 const rootReducer = (state: any, action: any) => {
   if (action.type === 'RESET_APP') {
-    state = undefined;
+    state = state?.util ? { util: state?.util } : undefined;
   }
   return allReducers(state, action);
 };
 
 export default (state: any, action: { [key: string]: any }) => {
-  return rootReducer(action.type === 'RESET_APP_SUCCESS' ? { auth: { loggedIn: false } } : { ...state, ...auth }, action);
+  return rootReducer(action.type === 'RESET_APP_SUCCESS' ? { auth: { loggedIn: false }, util : state.util } : { ...state, ...auth }, action);
 };
