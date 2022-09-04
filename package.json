@@ -59,9 +59,6 @@
     "webpack-dev-middleware": "^4.3.0",
     "webpack-dev-server": "^4.7.1"
   },
-  "engines": {
-    "node": "18.4.0"
-  },
   "eslintConfig": {
     "extends": "react-app"
   },
