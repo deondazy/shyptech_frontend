@@ -37,8 +37,8 @@ export const LinkWrapper: React.FC<Props> = ({ children, link, externalLink, cla
 }
 
 interface Props {
-    children: React.ReactChild,
+    children?: React.ReactChild | React.ReactNode
     link?: string,
     externalLink?: string,
-    className?: string
+    className?: string,
 }

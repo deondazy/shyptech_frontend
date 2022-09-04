@@ -177,9 +177,13 @@ export const PrivacyPolicy = () => {
 
                 title={"Retention of your data"}
 
-                value={`Your personal data or any other information collected will be stored for as long as necessary to fulfil the purposes described in this Notice.However, we will also retain personal data based on relevant provisions of applicable laws, to resolve disputes, and enforce our legal agreements and policies.We shall delete your data for targeted marketing purposes once you unsubscribe from our marketing communications.`}
+                value={`Your personal data or any other information collected will be stored for as long as necessary to
+                 fulfil the purposes described in this Notice.However, we will also retain personal data based on relevant
+                  provisions of applicable laws, to resolve disputes, and enforce our legal agreements and policies. 
+                  We shall delete your data for targeted marketing purposes once you unsubscribe from our marketing communications.`}
 
-                content={`Please note that we may retain your data for a more extended period, notwithstanding your request to remove your data, where there is a legal requirement to do so.`}
+                content={`Please note that we may retain your data for a more extended period, notwithstanding your request to 
+                remove your data, where there is a legal requirement to do so.`}
 
             />
 

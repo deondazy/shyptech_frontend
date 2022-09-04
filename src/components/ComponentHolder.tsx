@@ -36,6 +36,7 @@ export const ComponentHolder: React.FC<Props> = ({ visibility, ...props }) => {
 
 interface Props {
     control?: ReactElement<any, any>,
+    children?: React.ReactChild | React.ReactNode
     visibility?: boolean,
     title?: string,
     subtitle?: string,

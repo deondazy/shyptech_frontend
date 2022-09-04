@@ -610,7 +610,9 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                 title={"Severability"}
 
-                content={"Where any portion of this Terms of Use is deemed invalid or unenforceable either in whole or in part by any court or tribunal, such part shall be severed from the Terms of Use and shall not affect the validity or enforceability of any other part in this Terms of Use.."}
+                content={`Where any portion of this Terms of Use is deemed invalid or unenforceable either in 
+                whole or in part by any court or tribunal, such part shall be severed from the Terms of Use 
+                and shall not affect the validity or enforceability of any other part in this Terms of Use..`}
 
             />
 
@@ -621,8 +623,11 @@ export const TermsAndConditions: React.FC = ({ }) => {
                 title={"Updates, Modifications, and Amendments"}
 
                 items={[
-                    `As our technology evolves, we may need to update, modify, or amend our Terms of Use, tools, utilities, or general updates.We reserve the right to make changes to this Terms of Use at any time without notice to you. `,
-                    `We advise that you check this page often, referring to the date of the last modification on the page to ensure you are familiar with the current version of the Terms of Use.If a User objects to any of the changes to the Terms of Use, the User must cease using our Website and / or Services immediately.`
+                    `As our technology evolves, we may need to update, modify, or amend our Terms of Use, tools, utilities,
+                     or general updates.We reserve the right to make changes to this Terms of Use at any time without notice to you. `,
+                    `We advise that you check this page often, referring to the date of the last modification on the page to ensure 
+                    you are familiar with the current version of the Terms of Use.If a User objects to any of the changes to the Terms of Use
+                    , the User must cease using our Website and / or Services immediately.`
                 ]}
 
             />
@@ -634,7 +639,8 @@ export const TermsAndConditions: React.FC = ({ }) => {
                 title={"Complaints"}
 
                 dangerousContent={`
-        <p> If you have any complaints or reservations about us or any of the Services we provide, you may contact us via: <a href="mailto:hello@shypdeck.com"> hello@shypdeck.com</a> </p>`}
+        <p> If you have any complaints or reservations about us or any of the Services we provide,
+         you may contact us via: <a href="mailto:hello@shypdeck.com"> hello@shypdeck.com</a> </p>`}
 
             />
 

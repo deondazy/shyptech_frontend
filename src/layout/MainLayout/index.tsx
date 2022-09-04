@@ -48,5 +48,6 @@ interface Props {
   displaySubtitle?: string,
   isMobile: boolean,
   deviceWidth: number,
-  subtitleComponent?: React.ReactElement<any,any>
+  subtitleComponent?: React.ReactElement<any,any>,
+  children?: React.ReactChild | React.ReactNode
 }

@@ -61,6 +61,7 @@ interface Props {
     showHeader?: boolean,
     bodyAlignment?: boolean,
     noRightLinks?: boolean,
-    bodyClass?: string
+    bodyClass?: string,
+    children?: React.ReactChild | React.ReactNode
 }
 
