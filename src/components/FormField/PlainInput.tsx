@@ -90,20 +90,24 @@ export const PlainInput: React.FC<Props> = (
                     )
                 }>
 
-                    <p className="form-field-title">
+                    <>
 
-                        {label}
+                        <p className="form-field-title">
 
-                        {props.required === false ?
-                            <i className="form-field-optional"> (Optional) </i> :
-                            <></>
-                        }
+                            {label}
 
-                    </p>
+                            {props.required === false ?
+                                <i className="form-field-optional"> (Optional) </i> :
+                                <></>
+                            }
 
-                    {withLabelButton && <ButtonAddOn  {...withLabelButton} />}
+                        </p>
 
-                    {props.withExtraLabelComponent && props.withExtraLabelComponent}
+                        {withLabelButton && <ButtonAddOn  {...withLabelButton} />}
+
+                        {props.withExtraLabelComponent && props.withExtraLabelComponent}
+
+                    </>
 
                 </div>
 
