@@ -334,5 +334,6 @@ interface Props {
     titleLoader?: boolean,
     titleSvgIcon?: string,
     titleFlexComponent?: ReactElement,
-    navigatorExit?: boolean
+    navigatorExit?: boolean, 
+    children?: React.ReactChild | React.ReactNode
 }
