@@ -62,7 +62,7 @@ export const PriceField: React.FC<Props> = ({ onChange, value, ...props }) => {
                     isNumericString={true}
                     value={value}
                     placeholder={props.placeHolder}
-                    onChange={e =>
+                    onChange={(e : any) =>
                         onChange && (props.pattern
                             ? patternExtra(e.target.value)
                             : onChange(numberText(e.target.value)
