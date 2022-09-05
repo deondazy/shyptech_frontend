@@ -1,7 +1,4 @@
 import React from 'react';
-import Zero from 'assets/png/landing/about/about-base1.png';
-import One from 'assets/png/landing/about/about-base3.png';
-import Two from 'assets/png/landing/about/about-base2.png';
 
 export const AboutSectionBase: React.FC<{}> = () => {
 
@@ -10,11 +7,23 @@ export const AboutSectionBase: React.FC<{}> = () => {
 
         <div className='landing-page-section-two about-page-section-zero'>
 
-            <img src={Zero} alt={"shypdeck"} />
+            <img
+                loading='lazy'
+                src={"https://res.cloudinary.com/bohairs/image/upload/v1662357392/shypdeck/about-base1_x13sev.png"}
+                alt={"shypdeck"}
+            />
 
-            <img src={One} alt={"shypdeck"} />
+            <img
+                loading='lazy'
+                src={"https://res.cloudinary.com/bohairs/image/upload/v1662357402/shypdeck/about-base3_wlfrlm.png"}
+                alt={"shypdeck"}
+            />
 
-            <img src={Two} alt={"shypdeck"} />
+            <img
+                loading='lazy'
+                src={"https://res.cloudinary.com/bohairs/image/upload/v1662357396/shypdeck/about-base2_qnjt01.png"}
+                alt={"shypdeck"}
+            />
 
         </div>
 

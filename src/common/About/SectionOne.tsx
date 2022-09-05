@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionTwoImg from 'assets/png/landing/about/about-section-zero.png';
 
 export const AboutSectionOne: React.FC<{}> = () => {
 
@@ -23,7 +22,11 @@ export const AboutSectionOne: React.FC<{}> = () => {
 
                     <div className='landing-page-section-two-flex-right'>
 
-                        <img src={SectionTwoImg} alt={"shypdeck"} />
+                        <img 
+                            loading='lazy'
+                            src={"https://res.cloudinary.com/bohairs/image/upload/v1662357403/shypdeck/about-section-zero_jzz3vx.png"} 
+                            alt={"shypdeck"} 
+                        />
 
                     </div>
 

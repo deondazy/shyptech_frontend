@@ -1,5 +1,4 @@
 import React from 'react';
-import SectionThreeImg from 'assets/png/landing/about/about-telephone.png';
 import Instagram from 'assets/svg/social/instagram.svg';
 import { ViewFormatter } from 'components';
 import { SocialLinks } from 'constants/index';
@@ -46,7 +45,11 @@ export const AboutSectionThree: React.FC<{}> = () => {
 
                     <div className='landing-page-section-two-flex-right'>
 
-                        <img src={SectionThreeImg} alt={"shypdeck"} />
+                        <img 
+                            loading='lazy'
+                            src={"https://res.cloudinary.com/bohairs/image/upload/v1662357405/shypdeck/about-telephone_yjsu5x.png"} 
+                            alt={"shypdeck"} 
+                        />
 
                     </div>
 

@@ -1,5 +1,4 @@
 .landing-page {
-
   &-section-one {
     // @extend %body-width-and-padding;
 
@@ -10,7 +9,8 @@
     @include media-query(mobile) {
       padding: 210px 10px 130px !important;
       height: unset;
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 34%)), url(/assets/sectionOne_img_mobile.png);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 34%)),
+        url('https://res.cloudinary.com/bohairs/image/upload/v1662357102/shypdeck/sectionOne_img_mobile_mdjbnr.png');
       background-repeat: no-repeat;
       background-position: bottom;
       background-size: cover;
@@ -20,7 +20,6 @@
         margin: auto;
         max-width: 340px !important;
       }
-
     }
 
     position: relative;
@@ -28,13 +27,13 @@
     align-items: center;
     justify-content: center;
     height: 440px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 34%)), url(/assets/sectionOne_img_.png);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgb(0 0 0 / 34%)),
+      url('https://res.cloudinary.com/bohairs/image/upload/v1662357101/shypdeck/sectionOne_img__qmfbxt.png');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
 
     h1 {
-
       @include media-query(mobile) {
         line-height: 1.8;
       }
@@ -45,11 +44,9 @@
       text-transform: capitalize;
       color: color(white);
     }
-
   }
 
   &-section-two {
-
     &-wrapper {
       background: color(solitude);
     }
@@ -62,7 +59,6 @@
     }
 
     &-flex {
-
       @include media-query(mobile) {
         flex-direction: column;
       }
@@ -71,7 +67,6 @@
       justify-content: space-between;
 
       &-left {
-
         @include media-query(pc-high-resolution) {
           max-width: 460px;
         }
@@ -80,7 +75,6 @@
       }
 
       &-left p {
-
         padding-right: 10px;
         max-width: 500px;
 
@@ -89,7 +83,6 @@
         &:first-child {
           margin-top: 0 !important;
         }
-
       }
 
       &-left p:last-child {
@@ -97,7 +90,6 @@
       }
 
       &-right {
-
         @include media-query(pc-low-resolution) {
           max-width: 450px;
         }
@@ -117,15 +109,11 @@
           width: 100%;
           height: 100%;
         }
-
       }
-
     }
-
   }
 
   &-section-three {
-
     @extend %body-width-and-padding;
     text-align: center;
 
@@ -147,15 +135,12 @@
       margin-top: 24px;
       width: max-content;
     }
-
   }
 
   &-section-newsletter {
-
     padding-bottom: 60px !important;
 
     &-buttons {
-
       @include media-query(mobile) {
         flex-wrap: wrap;
       }
@@ -166,7 +151,6 @@
       margin-top: 20px;
 
       .button:first-child {
-
         @include media-query(mobile) {
           margin-right: 0;
           margin-bottom: 15px;
@@ -175,9 +159,7 @@
         margin-right: 23px;
         background: color(lighter-primary);
         color: color(primary);
-
       }
-
     }
 
     h1 {
@@ -204,11 +186,9 @@
       margin-top: 10px;
       width: 100%;
     }
-
   }
 
   &-section-partners {
-
     @extend %body-width-and-padding;
 
     display: flex;
@@ -217,7 +197,6 @@
     padding-top: 0 !important;
 
     &-part {
-
       @include media-query(mobile) {
         flex-direction: column;
         justify-content: center;
@@ -233,7 +212,6 @@
     }
 
     img {
-
       @include media-query(mobile) {
         margin-right: 0;
         margin-bottom: 24px;
@@ -247,13 +225,10 @@
       &:last-child {
         margin-right: 0;
       }
-
     }
-
   }
 
   &-section-four {
-
     @extend %body-width-and-padding;
 
     &-heading {
@@ -271,11 +246,9 @@
         height: 7px;
         background: color(primary);
       }
-
     }
 
     &-reasons {
-
       @include media-query(mobile) {
         flex-direction: column;
       }
@@ -284,7 +257,6 @@
       flex-wrap: wrap;
 
       &-item {
-
         @include media-query(tablet) {
           min-width: 50%;
           max-width: 50%;
@@ -295,7 +267,6 @@
           padding: 20px 1.5%;
           min-width: unset;
           max-width: 350px;
-
         }
 
         padding: 36px 1.5%;
@@ -305,7 +276,6 @@
         p {
           @include font-size(regular);
         }
-
       }
 
       &-item img {
@@ -319,9 +289,6 @@
         font-weight: 600;
         color: color(darker);
       }
-
     }
-
   }
-
 }
