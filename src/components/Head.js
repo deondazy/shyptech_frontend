@@ -2,21 +2,21 @@ import React from 'react';
 import Head from 'next/head';
 
 export const HtmlHead = ({ title }) => {
-  const description =
-    '__, ' +
-    '__';
-  const link = 'http://__.com';
-  const logo = 'http://__.png';
+  const description = `Shypdeck is a delivery service platform where users can access a variety of reliable 
+  and trusted delivery companies or agents to handle their deliveries.`;
+
+  const link = 'http://www.shypdeck.com';
+  const logo = 'https://res.cloudinary.com/bohairs/image/upload/v1661934050/shypdeck/logo_blue_qcigr3.png';
 
   const seoAttributes = `{
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "__ ",
-    "alternateName": ["__"],
-    "url": "__",
-    "sameAs": ["__"],
+    "name": "Shypdeck",
+    "alternateName": ["Shypdeck"],
+    "url": "http://www.shypdeck.com",
+    "sameAs": ["http://web.shypdeck.com"],
 
-    "logo": "__",
+    "logo": "https://res.cloudinary.com/bohairs/image/upload/v1661934050/shypdeck/logo_blue_qcigr3.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "__",
