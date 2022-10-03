@@ -18,6 +18,12 @@
 
     &-holder {
       @extend %body-width-and-padding;
+
+      .form-field-group {
+        @include media-query(mobile) {
+          width: 100%;
+        }
+      }
     }
   }
 

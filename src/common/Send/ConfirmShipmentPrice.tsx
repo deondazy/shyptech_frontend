@@ -53,7 +53,7 @@ export const ConfirmShipmentPrice: React.FC<Props> = ({ shipmentInfo, trigger, o
 
         if ( typeof createOrder?.authorizationUrl === "string" ) {
 
-            // window.location = createOrder?.authorizationUrl;
+            window.location = createOrder?.authorizationUrl;
 
         }
 
