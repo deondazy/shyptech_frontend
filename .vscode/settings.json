@@ -5,12 +5,18 @@
         "behaviour",
         "chartjs",
         "csrf",
+        "deliveryimage",
         "firstname",
+        "geocode",
         "lastname",
         "litepicker",
         "otpauth",
         "pdfmake",
+        "receiverstate",
+        "senderstate",
+        "shipmenttype",
         "totp",
-        "Ussd"
+        "Ussd",
+        "vehicletype"
     ]
 }

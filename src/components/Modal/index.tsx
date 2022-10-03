@@ -233,60 +233,64 @@ const ModalDom: React.FC<Props> = ({ title, children, subtitle, noObviousExit, .
                                 </div>
                             }
 
-                            {(title || subtitle) && !props.legendComponent &&
-                                <div
-                                    className={`modal-legend ${props.legendClass || ""}`}>
-                                    {
-                                        title &&
+                            <div className="modal_body">
 
-                                        <div className={
-                                            classnames(
-                                                "modal-legend-title",
-                                                (props.titleSvgIcon || props.titleFlexComponent) && "modal-legend-title-flex"
-                                            )
-                                        }>
+                                {(title || subtitle) && !props.legendComponent &&
+                                    <div
+                                        className={`modal-legend ${props.legendClass || ""}`}>
+                                        {
+                                            title &&
 
-                                            <p> {title} </p>
+                                            <div className={
+                                                classnames(
+                                                    "modal-legend-title",
+                                                    (props.titleSvgIcon || props.titleFlexComponent) && "modal-legend-title-flex"
+                                                )
+                                            }>
 
-                                            {props.titleSvgIcon &&
-                                                <div
-                                                    className="modal-legend-title-icon"
-                                                    dangerouslySetInnerHTML={{ __html: props.titleSvgIcon }}
-                                                />
-                                            }
+                                                <p> {title} </p>
 
-                                            {props.titleFlexComponent && props.titleFlexComponent}
+                                                {props.titleSvgIcon &&
+                                                    <div
+                                                        className="modal-legend-title-icon"
+                                                        dangerouslySetInnerHTML={{ __html: props.titleSvgIcon }}
+                                                    />
+                                                }
 
-                                        </div>
-                                    }
+                                                {props.titleFlexComponent && props.titleFlexComponent}
 
-                                    {
-                                        (subtitle || props.subtitleLoader) &&
-                                        <>
-                                            {
-                                                props.subtitleLoader ?
-                                                    <div className="content-loader modal-subtitle">
+                                            </div>
+                                        }
 
-                                                    </div>
-                                                    :
-                                                    <div className="modal-legend-subtitle">
-                                                        <p> {subtitle} </p>
-                                                    </div>
-                                            }
-                                        </>
-                                    }
-                                </div>
-                            }
+                                        {
+                                            (subtitle || props.subtitleLoader) &&
+                                            <>
+                                                {
+                                                    props.subtitleLoader ?
+                                                        <div className="content-loader modal-subtitle">
 
-                            {props.legendComponent && <div className={props.legendClass || ""}> {props.legendComponent} </div>}
+                                                        </div>
+                                                        :
+                                                        <div className="modal-legend-subtitle">
+                                                            <p> {subtitle} </p>
+                                                        </div>
+                                                }
+                                            </>
+                                        }
+                                    </div>
+                                }
 
-                            {
-                                children &&
+                                {props.legendComponent && <div className={props.legendClass || ""}> {props.legendComponent} </div>}
 
-                                <div className="modal_body">
-                                    {children}
-                                </div>
-                            }
+                                {
+                                    children &&
+
+                                    <div className="modal_body_container">
+                                        {children}
+                                    </div>
+                                }
+
+                            </div>
 
                         </div>
 
@@ -334,6 +338,6 @@ interface Props {
     titleLoader?: boolean,
     titleSvgIcon?: string,
     titleFlexComponent?: ReactElement,
-    navigatorExit?: boolean, 
+    navigatorExit?: boolean,
     children?: React.ReactChild | React.ReactNode
 }

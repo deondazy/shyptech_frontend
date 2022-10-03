@@ -2,6 +2,8 @@ export * from './change';
 export * from './classnames';
 export * from './modalUtils';
 export * from './numberFormat';
+export * from './objectUtils';
+export * from './providerFormUtils';
 export * from './quickValidation';
 export * from './resizer';
 export * from './setBase64';

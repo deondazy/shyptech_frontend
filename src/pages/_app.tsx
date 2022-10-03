@@ -127,6 +127,7 @@ function App({ Component, pageProps }: AppProps) {
               isMobile={showMobileView}
               deviceWidth={deviceWidth}
               clientMode={clientMode}
+              currentPath={currentPath}
             />
 
           </>

@@ -14,12 +14,12 @@ export const quickValidation = (
     let result: { [key: string]: string[] } = { ...(form.error ? form.error : {}) };
     var finalRes: { [key: string]: string[] | boolean } = {};
 
-    if (field === "email" || (field === "email_mobile" && !isNumber(value))) {
+    if (field === "email" || ["senderEmail", "receiversEmail"].includes(field) || (field === "email_mobile" && !isNumber(value))) {
 
         if (!value) error.push("Please enter email.");
         if (!validateEmail(value)) error.push("Invalid email provided.");
 
-    } else if (field === "fullName" || field === "alias") {
+    } else if (field === "fullName" || field === "alias" || ["sendersName", "receiversName"].includes(field)) {
 
         if (value.length < 2) error.push(`${field === "alias" ? "Alias" : "Name"} must be at least 2 characters long`);
         if (value.length > 50) error.push(`Provided ${field === "alias" ? "alias" : "name"} is too long`);
@@ -43,6 +43,12 @@ export const quickValidation = (
     } else if (field === "business") {
 
         if (!value) error.push("Invalid business name provided");
+
+    } else if ( ["quantity", "weight", "value"].includes(field)) {
+
+        if (!value) error.push("Please provide a value");
+
+        if ( isNaN(Number(value)) || !Number(value) ) error.push("Value must be greater than 0");
 
     } else if (field === "password") {
 
@@ -99,7 +105,7 @@ export const quickValidation = (
 
         if (Number(value) === 0) error.push(`please enter amount to ${context}.`);
 
-    } else if (field === "mobile" || (field === "email_mobile" && isNumber(value))) {
+    } else if (field === "mobile" || ["senderPhoneNumber", "receiverPhoneNumber"].includes(field) || (field === "email_mobile" && isNumber(value))) {
 
         const extraCondition = value.startsWith("0") && value.length === 11;
 
@@ -149,13 +155,16 @@ export const quickValidation = (
 
         if (!value) error.push("Please enter state");
 
-    } else if (field === "address") {
+    } else if (
+        field === "address" ||
+        ["senderAddress", "receiverAddress", "senderLocality", "senderState", "receiverState", "receiversLocality"].includes(field)
+    ) {
 
         if (!value) error.push("Please enter address");
 
         if (value && value.length < 3) error.push("Please enter a valid address");
 
-    } else if (field === "recipients" ) {
+    } else if (field === "recipients") {
 
         if (value?.length === 0) error.push("Please enter at least one recipient");
 
@@ -164,6 +173,14 @@ export const quickValidation = (
         if (!value) error.push("Please enter a reason");
 
         if (value && value.length < 3) error.push("Please enter a valid reason");
+
+    } else if (field === "provider") {
+
+        if (!value) error.push("Please select a provider");
+
+    } else if (field === "service") {
+
+        if (!value) error.push("Please select a service");
 
     } else if (field === "pin") {
 
@@ -277,7 +294,7 @@ export const quickValidation = (
 
     }
 
-    if (["fullName"].includes(field)) {
+    if (["fullName", "receiversName", "sendersName"].includes(field)) {
 
         if (validateName(value)) error.push("Field contains invalid characters");
 

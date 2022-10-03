@@ -11,5 +11,8 @@ export * from './Header/MobileHeaderToggler';
 export * from './Modal';
 export * from './official';
 export * from './Pagination';
+export * from './ProgressTab';
+export * from './TabLayout';
 export * from './Transitions';
 export * from './ViewFormatter';
+

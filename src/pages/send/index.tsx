@@ -1,7 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { LandingLayout } from 'layout';
+import { DeliveryServiceSelector } from 'common/Send/DeliveryServiceSelector';
+import { shipmentProcess } from 'redux/actions/ShipmentAction';
+import { useDispatch } from 'react-redux';
+import { providerFormType } from 'types';
+import { TabLayout } from 'components';
+import { ProviderForm } from 'common/Send/ProviderForm';
+import { useRouter } from 'next/router';
+import { isObj } from 'utils';
+import { getAddressInfo } from 'redux/actions/UtilActions';
 
-const Send: React.FC<Props> = ({ isMobile, deviceWidth }) => {
+const Send: React.FC<Props> = ({ isMobile, deviceWidth, currentPath }) => {
+
+    const dispatch = useDispatch();
+
+    const router = useRouter();
+
+    const { view } = router.query;
+
+    const [state, setState] = useState<{
+        beep: number,
+        data?: providerFormType
+    }>({
+        beep: 0
+    });
+
+    const engageSelection = (data: providerFormType) => {
+
+        setState((prevState) => ({ ...prevState, data }));
+
+        router.push("send?view=fill")
+
+    };
+
+    useEffect(() => {
+
+        dispatch(shipmentProcess("get-providers", { service: "1" }));
+
+        dispatch(getAddressInfo("retrieve-countries", {}));
+
+    }, []);
 
     return (
 
@@ -14,6 +52,30 @@ const Send: React.FC<Props> = ({ isMobile, deviceWidth }) => {
             noRightLinks={true}
         >
 
+            <TabLayout
+
+                queryKey='view'
+
+                tabs={[
+
+                    {
+                        id: "",
+                        component: <DeliveryServiceSelector onSelectionSuccess={(selection) => engageSelection(selection)} />,
+                        condition: !view || !state?.data
+                    },
+
+                    {
+                        id: "fill",
+                        component: <ProviderForm data={state.data} inView={view === "fill"} goBack={() => router.push("send")} />,
+                        condition: view === "fill" && isObj(state.data)
+                    }
+
+                ]}
+
+            />
+
+
+
         </LandingLayout >
 
     )
@@ -23,5 +85,6 @@ export default Send;
 
 interface Props {
     isMobile: boolean,
-    deviceWidth: number
+    deviceWidth: number,
+    currentPath: string
 }

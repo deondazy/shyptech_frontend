@@ -10,7 +10,13 @@ const initialState: utilType = {
     },
     states:
     {
-        data: [],
+        data: [
+            {
+                id: "1",
+                name: "Lagos",
+                localities: []
+            }
+        ],
         loader: false,
         error: false
     },
@@ -53,23 +59,6 @@ const utilReducer = (state = initialState, action: { [key: string]: any }) => {
                 }
             }
 
-        case utilTypes.GET_CITIES_SUCCESS:
-
-            const newCity: cityType = action.payload?.[0];
-
-            let currentCities = state.cities.data;
-
-            currentCities[newCity.state.id] = newCity.state.locals;
-
-            return {
-                ...state,
-                cities: {
-                    ...state.cities,
-                    data: currentCities,
-                    loader: false
-                }
-            }
-
         case utilTypes.GET_STATES_START:
             return {
                 ...state,
@@ -87,17 +76,6 @@ const utilReducer = (state = initialState, action: { [key: string]: any }) => {
                     loader: false
                 }
             }
-
-        case utilTypes.GET_STATES_SUCCESS:
-            return {
-                ...state,
-                states: {
-                    ...state.states,
-                    data: action.payload.map((item: { stateName: string, id: string }) => ({ name: item.stateName, id: item.id })),
-                    loader: false
-                }
-            }
-
 
         case utilTypes.GET_COUNTRIES_START:
             return {
@@ -127,7 +105,48 @@ const utilReducer = (state = initialState, action: { [key: string]: any }) => {
                 }
             };
 
+        case utilTypes.GET_STATES_SUCCESS:
+
+            return {
+
+                ...state,
+
+                states: {
+
+                    ...state.states,
+
+                    data: action.payload?.map((item: { id: number, stateName: string }) => ({
+
+                        id: item.id,
+
+                        name: item.stateName,
+
+                    }))
+                }
+            }
+
+        case utilTypes.GET_CITIES_SUCCESS:
+
+            const currentCities = state?.cities?.data || {};
+
+            currentCities[action?.payload?.body?.ref || 0] = action.payload.map((item: any) => ({ name: item.cityName, id: item.id }));
+
+            return {
+
+                ...state,
+
+                cities: {
+
+                    ...state.cities,
+
+                    data: currentCities
+
+                }
+
+            }
+
         default:
+            
             return state;
     }
 };

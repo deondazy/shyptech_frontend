@@ -7,6 +7,7 @@ import { ReactElement } from 'react';
 import { LabeledCheckbox } from './LabelledCheckBox';
 import { OptionsInput } from './OptionsInput';
 import { Switch } from './Switch';
+import { FormFieldPhoneBox } from './PhoneBox';
 
 export const FormField: React.FC<Props> = (props) => {
 
@@ -37,6 +38,9 @@ export const FormField: React.FC<Props> = (props) => {
         case 'switch':
             RenderElement = Switch;
             break;
+        case 'phone':
+            RenderElement = FormFieldPhoneBox;
+            break;
         default:
             RenderElement = PlainInput;
     }
@@ -47,7 +51,7 @@ export const FormField: React.FC<Props> = (props) => {
 };
 
 interface Props {
-    type?: 'pin' | 'image' | 'option' | 'textarea' | 'price-field' | 'checkbox' |
+    type?: 'pin' | 'image' | 'option' | 'textarea' | 'price-field' | 'checkbox' | 'phone' |
     'switch' | 'plain' | 'account-number' | 'password' | 'toggle' | 'date' | 'pattern',
     label?: string,
     onChange?: (e?: any) => void,

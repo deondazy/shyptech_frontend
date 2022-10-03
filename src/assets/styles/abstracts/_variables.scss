@@ -1,31 +1,30 @@
 :root {
-  --primary-color: #1565C0;
+  --primary-color: #1565c0;
 }
 
 $colors: (
-  primary: #1565C0,
-  light-primary: #E2EAFC,
-  lighter-primary: #E3F2FD,
-
+  primary: #1565c0,
+  light: #ccdbfd,
+  light-primary: #e2eafc,
+  lighter-primary: #e3f2fd,
   secondary-text: #e0e3e5,
   red: #ea3223,
   white: #ffffff,
   footer: #18191f,
   footer-icon-bg: #303135,
   footer-text: rgba(217, 219, 225, 1),
-
   dark: #57585e,
-  darker: #21232D,
-
-  solitude: #EDF2FB,
-
+  darker: #21232d,
+  black: #000000,
+  solitude: #edf2fb,
   faux-blue: rgba(22, 22, 168, 0.814),
   input-border: #e0e3e5,
   input-bg: #f3f3f3,
-  input-placeholder: #6D6E76,
+  input-placeholder: #6d6e76,
   modal-overlay: rgba(0, 0, 0, 0.2),
   success: #f9d76f,
-  empty-item: #c73e1d
+  empty-item: #c73e1d,
+  select-box: rgb(235 235 235)
 );
 
 $shadows: (
@@ -55,7 +54,8 @@ $normal-font-sizes: (
   m-large: 24px,
   x-large: 36px,
   xx-large: 40px,
-  xxx-large: 60px
+  xxx-large: 60px,
+  xxxx-large: 63px
 );
 
 $small-font-sizes: (
@@ -68,7 +68,8 @@ $small-font-sizes: (
   m-large: 23.5px,
   x-large: 28.5px,
   xx-large: 32px,
-  xxx-large: 51px
+  xxx-large: 51px,
+  xxxx-large: 58px
 );
 
 $small-tab-font-sizes: (
@@ -81,7 +82,8 @@ $small-tab-font-sizes: (
   m-large: 21.5px,
   x-large: 24px,
   xx-large: 30px,
-  xxx-large: 47px
+  xxx-large: 47px,
+  xxxx-large: 52px
 );
 
 $font-weights: (

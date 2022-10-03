@@ -3,6 +3,24 @@
   position: relative;
   margin-bottom: 24px;
 
+  &-group {
+    @include media-query(non-pc) {
+      padding: 42px 20px 16px;
+      width: 90%;
+    }
+
+    margin: 64px auto;
+    box-shadow: 1px 8px 34px rgba(21, 101, 192, 0.1);
+    border-radius: 12px;
+    border: 2px solid color(solitude);
+    padding: 42px 36px;
+    max-width: 651px;
+
+    &-holder {
+      @extend %body-width-and-padding;
+    }
+  }
+
   &.title-left {
     .form-field-title {
       text-align: left;
@@ -10,7 +28,6 @@
   }
 
   &-icon-left {
-
     .form-field-icon {
       top: 30%;
       right: unset !important;
@@ -20,7 +37,6 @@
     input {
       padding-left: 60px !important;
     }
-
   }
 
   &.no-border {
@@ -246,7 +262,6 @@
       color: color(dark);
     }
   }
-
 }
 
 .form-field-placeholder span {

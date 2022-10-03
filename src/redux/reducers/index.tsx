@@ -1,16 +1,18 @@
 import { combineReducers } from 'redux';
 import auth from './authReducer';
 import route from './routerReducer';
-import user from './userReducer';
+import shipment from './shipmentReducer';
 import toast from './toastReducer';
+import user from './userReducer';
 import util from './utilReducer';
 import worker from './workerReducer';
 
 const allReducers = combineReducers({
   auth,
   route,
-  user,
+  shipment,
   toast,
+  user,
   util,
   worker
 });

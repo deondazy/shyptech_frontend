@@ -1,7 +1,7 @@
 import { NextRouter } from "next/router";
 import { ParsedUrlQuery } from "querystring";
 
-const generateUrlParams = (item: { [key: string]: string } | ParsedUrlQuery) => {
+export const generateUrlParams = (item: { [key: string]: string } | ParsedUrlQuery) => {
 
     let params = "";
 

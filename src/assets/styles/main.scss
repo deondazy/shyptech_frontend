@@ -14,6 +14,7 @@
 //3. Layout
 @import 'layout/landingLayout';
 @import 'layout/mainLayout';
+@import 'layout/tabLayout';
 
 //4. Components
 @import 'components/auth';
@@ -32,6 +33,8 @@
 @import 'components/modal';
 @import 'components/official';
 @import 'components/pagination';
+@import 'components/pop-button';
+@import 'components/progress-tab';
 @import 'components/table';
 @import 'components/toast';
 @import 'components/view-formatter';
@@ -40,6 +43,7 @@
 //5. Pages
 @import 'pages/landing/landing';
 @import 'pages/landing/about';
+@import 'pages/send/confirm-shipment-box';
 
 //6. Transitions
 @import 'transitions/content-loader';

@@ -1,0 +1,13 @@
+.pop-button {
+  display: flex;
+  align-items: center;
+
+  span {
+    height: 17px;
+  }
+
+  small {
+    @include font-size(small);
+    margin-left: 20px;
+  }
+}

@@ -4,19 +4,41 @@ import { typeOfDispatch } from 'redux/store';
 
 const details = (reqType: string): { start: string, success: string, failure: string } => {
     switch (reqType) {
+
         case "retrieve-cities":
+
             return {
                 start: utilTypes.GET_CITIES_START,
                 success: utilTypes.GET_CITIES_SUCCESS,
                 failure: utilTypes.GET_CITIES_FAILURE,
             };
+
         case "retrieve-countries":
+
             return {
                 start: utilTypes.GET_COUNTRIES_START,
                 success: utilTypes.GET_COUNTRIES_SUCCESS,
                 failure: utilTypes.GET_COUNTRIES_FAILURE,
             };
+
+        case 'retrieve-localities':
+
+            return {
+                start: utilTypes.GET_LOCALITIES_START,
+                success: utilTypes.GET_LOCALITIES_SUCCESS,
+                failure: utilTypes.GET_LOCALITIES_FAILURE,
+            }
+
+        case 'retrieve-states':
+
+            return {
+                start: utilTypes.GET_STATES_START,
+                success: utilTypes.GET_STATES_SUCCESS,
+                failure: utilTypes.GET_STATES_FAILURE,
+            }
+
         default:
+
             return {
                 start: utilTypes.GET_STATES_START,
                 success: utilTypes.GET_STATES_SUCCESS,
@@ -27,7 +49,7 @@ const details = (reqType: string): { start: string, success: string, failure: st
 
 
 export const getAddressInfo = (
-    ref: 'retrieve-cities' | 'retrieve-states' | 'retrieve-countries',
+    ref: 'retrieve-cities' | 'retrieve-states' | 'retrieve-countries' | 'retrieve-localities',
     body: { id?: string },
 ) => async (dispatch: typeOfDispatch) => {
 

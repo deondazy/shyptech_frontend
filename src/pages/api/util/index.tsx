@@ -9,7 +9,9 @@ const link = (item: string, addressDetails?: { id: string }): { type: "post" | "
         case "retrieve-states":
             return { type: "get", url: `states` };
         case "retrieve-cities":
-            return { type: "get", url: `lgas?id=${addressDetails?.id || ""}` };
+            return { type: "get", url: `cities` };
+        case 'retrieve-localities':
+            return { type: "get", url: `localities` };
         default:
             return { type: "get", url: `states` };
     }

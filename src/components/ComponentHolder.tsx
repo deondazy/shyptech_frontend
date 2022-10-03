@@ -1,14 +1,17 @@
 import React, { ReactElement } from 'react';
 import { ComponentHeader } from 'components';
 import { classnames } from 'utils';
+import { PopButton } from './PopButton';
 
-export const ComponentHolder: React.FC<Props> = ({ visibility, ...props }) => {
+export const ComponentHolder: React.FC<Props> = ({ visibility, withPopButton, onPop, ...props }) => {
 
     return (
         <>
             {(visibility === false ? visibility : true) &&
 
                 <div className={`component-holder ${props.className || ""}`}>
+
+                    {withPopButton && <PopButton onClick={()=> onPop && onPop()} /> }
 
                     {(props.title || props.customHeader || props.control) &&
 
@@ -43,5 +46,7 @@ interface Props {
     customHeader?: React.FC,
     className?: string,
     bodyClass?: string,
-    headerClass?: string
+    headerClass?: string,
+    withPopButton?: boolean,
+    onPop?(): void
 }

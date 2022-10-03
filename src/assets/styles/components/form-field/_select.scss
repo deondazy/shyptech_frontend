@@ -96,7 +96,7 @@
     min-width: 117px;
     max-height: 400px;
     overflow-y: auto;
-    background: white;
+    background: color(select-box);
 
     &-search {
       position: sticky;
@@ -142,13 +142,13 @@
   }
 
   .form-input {
+    @include font-size(small);
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
   }
 }
-
 
 .form-field-phone-box .select {
   padding: 12px 13px;
