@@ -1,5 +1,4 @@
 import { UploadIcon } from 'components/Assets';
-import { Button } from 'components/Button';
 import React, { useState } from 'react';
 import { change, setBase64 } from 'utils';
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Modal } from 'components';
 import { useDispatch } from 'react-redux';
-import { renewAuthToken, resetApp } from 'redux/actions';
+import { resetApp } from 'redux/actions';
 import router from 'next/router';
 import { quickToast } from 'redux/store';
 
@@ -21,7 +21,7 @@ export const TimeOutBox: React.FC<Props> = ({ trigger }) => {
 
             setExtending(true);
 
-            const success = await renewAuthToken();
+            const success = await null;
 
             setExtending(false);
 

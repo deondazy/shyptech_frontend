@@ -10,7 +10,7 @@ import { useRouter } from 'next/router';
 import { isObj } from 'utils';
 import { getAddressInfo } from 'redux/actions/UtilActions';
 
-const Send: React.FC<Props> = ({ isMobile, deviceWidth, currentPath }) => {
+const Send: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
     const dispatch = useDispatch();
 

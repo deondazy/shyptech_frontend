@@ -1,4 +1,4 @@
-import { citiesBlock, providerFormType, statesBlock, utilType } from "types";
+import { citiesBlock, providerFormType, statesBlock } from "types";
 import { isObj } from "./objectUtils";
 
 export const reformRequest = (obj: { [key: string]: { value?: string, label?: string, base64?: string, file?: any } | string | number }) => {

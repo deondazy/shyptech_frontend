@@ -76,7 +76,7 @@ export const DeliveryServiceSelector: React.FC<Props> = ({ onSelectionSuccess })
 
                 form: res[0].form
 
-            };
+            } as any;
 
             onSelectionSuccess(data);
 

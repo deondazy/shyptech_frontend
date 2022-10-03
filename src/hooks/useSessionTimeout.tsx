@@ -3,7 +3,6 @@ import { dateDifference } from 'utils/date';
 import { store } from 'redux/store';
 import * as WorkerTypes from 'redux/types/workerTypes';
 import * as AuthTypes from 'redux/types/authTypes';
-import { renewAuthToken } from 'redux/actions';
 import { workerType } from 'types';
 
 export const useSessionTimeout = (
@@ -19,7 +18,7 @@ export const useSessionTimeout = (
 
         if (!refreshStatus) {
 
-            const val = await renewAuthToken();
+            const val = await "(-_-)";
 
             if ( typeof val === "string" && val.toLowerCase().includes("expired") ) {
 

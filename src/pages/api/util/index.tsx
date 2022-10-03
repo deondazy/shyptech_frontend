@@ -2,7 +2,7 @@ import axios from 'axios'
 import { authorizedHeader } from 'service/helper';
 // import { verifyCSRF } from 'service/verifyCSRF';
 
-const link = (item: string, addressDetails?: { id: string }): { type: "post" | "get", url: string } => {
+const link = (item: string): { type: "post" | "get", url: string } => {
     switch (item) {
         case "retrieve-countries":
             return { type: "get", url: `countries` };
@@ -25,7 +25,7 @@ async function handler(req: { [key: string]: any }, res: { [key: string]: any })
 
         const { authType, ...rest } = req.body;
 
-        const { type, url } = link(authType, rest);
+        const { type, url } = link(authType);
 
         const { data } = await axios.call(
             type,

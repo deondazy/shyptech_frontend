@@ -28,15 +28,6 @@ const initialState: utilType = {
     }
 };
 
-type cityType = {
-    state: {
-        capital: string,
-        name: string,
-        id: string,
-        locals: { id: string, name: string }[]
-    };
-}
-
 const utilReducer = (state = initialState, action: { [key: string]: any }) => {
 
     switch (action.type) {

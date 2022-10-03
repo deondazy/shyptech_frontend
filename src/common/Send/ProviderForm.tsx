@@ -202,8 +202,6 @@ export const ProviderForm: React.FC<{ data?: providerFormType, inView: boolean, 
 
         });
 
-        console.log(errors)
-
         return errors;
 
     }

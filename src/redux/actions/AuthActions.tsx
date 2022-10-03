@@ -1,6 +1,6 @@
 import axios from 'service/axios';
 import * as AuthActions from '../types/authTypes';
-import { accessToken, referenceToken, store, typeOfDispatch } from 'redux/store';
+import { accessToken, referenceToken, typeOfDispatch } from 'redux/store';
 
 export const resetApp = () => async (dispatch: typeOfDispatch) => {
     try {
