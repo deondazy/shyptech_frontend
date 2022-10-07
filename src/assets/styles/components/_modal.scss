@@ -60,6 +60,11 @@
       max-width: 300px;
     }
 
+    @media only screen and (min-width: 1000px) {
+      min-width: 400px;
+      max-width: 400px;
+    }
+
     max-width: 400px;
   }
 

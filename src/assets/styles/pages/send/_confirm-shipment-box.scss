@@ -17,10 +17,10 @@
     }
 
     .view-formatter-regular-value {
-      @include font-size-override(xxxx-large);
+      @include font-size-override(xx-large);
       width: 100%;
-      font-family: $header-font;
       line-height: 1.1;
+      font-family: $header-font;
     }
   }
 }

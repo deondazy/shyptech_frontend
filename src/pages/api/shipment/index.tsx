@@ -2,8 +2,9 @@ import axios from 'axios'
 import { authorizedHeader } from 'service/helper';
 // import { verifyCSRF } from 'service/verifyCSRF';
 
-const link = (item: string, service?: string, provider?: string, address?: string, reference?: string): 
-{ type: "post" | "get" | "patch", url: string } => {
+const link = (
+    item: string, service?: string, provider?: string, address?: string, reference?: string
+): { type: "post" | "get" | "patch", url: string } => {
 
     switch (item) {
 
@@ -34,6 +35,10 @@ const link = (item: string, service?: string, provider?: string, address?: strin
         case "create-order":
 
             return { type: "post", url: `pay/${reference}` };
+
+        case "get-payment-status":
+
+            return { type: "get", url: `pay/${reference}/verify` };
 
         default:
             return { type: "post", url: `provider` };

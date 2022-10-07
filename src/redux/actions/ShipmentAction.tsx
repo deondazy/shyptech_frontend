@@ -4,7 +4,7 @@ import { accessToken, referenceToken, typeOfDispatch } from 'redux/store';
 import { authProcess } from './AuthActions';
 
 const dispatchActions = (
-    type: "get-providers" | "get-provider-form" | "get-location" | "get-price" | "create-order" | "get-provider"
+    type: "get-providers" | "get-provider-form" | "get-location" | "get-price" | "create-order" | "get-provider" | "get-payment-status"
 ) => {
 
     switch (type) {
@@ -49,6 +49,14 @@ const dispatchActions = (
                 failure: SubscribeActions.RETRIEVE_PROVIDER_FAILURE
             });
 
+        case "get-payment-status":
+
+            return ({
+                start: SubscribeActions.RETRIEVE_PROVIDER_START,
+                success: SubscribeActions.RETRIEVE_PROVIDER_SUCCESS,
+                failure: SubscribeActions.RETRIEVE_PROVIDER_FAILURE
+            });
+
         default:
 
             return ({
@@ -62,11 +70,12 @@ const dispatchActions = (
 }
 
 export const shipmentProcess = (
-    type: "get-providers" | "get-provider-form" | "get-location" | "get-provider" | "get-price" | "create-order",
+    type: "get-providers" | "get-provider-form" | "get-location" | "get-provider" | "get-price" | "create-order" | "get-payment-status",
     body: {
         service?: string | number,
         provider?: string | number,
-        address?: string
+        address?: string,
+        reference?: string
     } = {},
     returnData?: boolean | string,
 
@@ -81,7 +90,7 @@ export const shipmentProcess = (
 
             }
 
-            if ( type === "create-order" ) {
+            if (type === "create-order") {
 
                 // always generate a reference when attempting to create order
 
@@ -94,9 +103,9 @@ export const shipmentProcess = (
                 payload: { type, body }
             });
 
-            const { data } = await axios.post('/api/shipment', { authType: type, ...{ ...body, reference: referenceToken() } });
+            const { data } = await axios.post('/api/shipment', { authType: type, ...{ reference: referenceToken(), ...body } });
 
-            if ( data?.status === false ) {
+            if (data?.status === false) {
 
                 throw new Error(data.message);
 

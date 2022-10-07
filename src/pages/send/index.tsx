@@ -9,6 +9,7 @@ import { ProviderForm } from 'common/Send/ProviderForm';
 import { useRouter } from 'next/router';
 import { isObj } from 'utils';
 import { getAddressInfo } from 'redux/actions/UtilActions';
+import { ConfirmShipmentPayment } from 'common/Send/ConfirmShipmentPayment';
 
 const Send: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
@@ -16,7 +17,7 @@ const Send: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
     const router = useRouter();
 
-    const { view } = router.query;
+    const { view, reference } = router.query;
 
     const [state, setState] = useState<{
         beep: number,
@@ -61,13 +62,19 @@ const Send: React.FC<Props> = ({ isMobile, deviceWidth }) => {
                     {
                         id: "",
                         component: <DeliveryServiceSelector onSelectionSuccess={(selection) => engageSelection(selection)} />,
-                        condition: !view || !state?.data
+                        condition: (!view || !state?.data) && !reference
                     },
 
                     {
                         id: "fill",
                         component: <ProviderForm data={state.data} inView={view === "fill"} goBack={() => router.push("send")} />,
-                        condition: view === "fill" && isObj(state.data)
+                        condition: view === "fill" && isObj(state.data) && !reference
+                    },
+
+                    {
+                        id: "confirm",
+                        component: <ConfirmShipmentPayment reference={String(reference)} />,
+                        condition: (reference !== undefined) && !view
                     }
 
                 ]}
