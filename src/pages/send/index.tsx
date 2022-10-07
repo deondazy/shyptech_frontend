@@ -40,6 +40,7 @@ const Send: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
         dispatch(getAddressInfo("retrieve-countries", {}));
 
+    // eslint-disable-next-line
     }, []);
 
     return (

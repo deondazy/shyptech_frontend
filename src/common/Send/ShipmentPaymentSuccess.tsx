@@ -2,7 +2,7 @@ import React from "react";
 import SuccessImage from "assets/svg/payment-success.svg";
 import { Button, ComponentHolder } from "components";
 
-export const ShipmentPaymentSuccess: React.FC<Props> = ({ reference, visibility }) => {
+export const ShipmentPaymentSuccess: React.FC<Props> = ({ visibility }) => {
 
     return (
 
