@@ -4,6 +4,7 @@ import { store } from 'redux/store';
 import * as WorkerTypes from 'redux/types/workerTypes';
 import * as AuthTypes from 'redux/types/authTypes';
 import { workerType } from 'types';
+import { authProcess } from 'redux/actions';
 
 export const useSessionTimeout = (
     isInSession: boolean,
@@ -18,7 +19,8 @@ export const useSessionTimeout = (
 
         if (!refreshStatus) {
 
-            const val = await "(-_-)";
+            //@ts-expect-error
+            const val : any = await store.dispatch(authProcess("retrieve-auth" ,  { userName: "Awaal" }));
 
             if ( typeof val === "string" && val.toLowerCase().includes("expired") ) {
 

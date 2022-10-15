@@ -4,7 +4,7 @@ import { accessToken, referenceToken, typeOfDispatch } from 'redux/store';
 import { authProcess } from './AuthActions';
 
 const dispatchActions = (
-    type: "get-providers" | "get-provider-form" | "get-location" | "get-price" | "create-order" | "get-provider" | "get-payment-status"
+    type: "get-providers" | "get-provider-form" | "get-location" | "get-price" | "create-order" | "get-provider" | "get-payment-status" | "track"
 ) => {
 
     switch (type) {
@@ -57,6 +57,16 @@ const dispatchActions = (
                 failure: SubscribeActions.RETRIEVE_PROVIDER_FAILURE
             });
 
+        case "track":
+
+            return ({
+
+                start: SubscribeActions.TRACK_ORDER_START,
+                success: SubscribeActions.TRACK_ORDER_SUCCESS,
+                failure: SubscribeActions.TRACK_ORDER_FAILURE
+
+            })
+
         default:
 
             return ({
@@ -70,13 +80,16 @@ const dispatchActions = (
 }
 
 export const shipmentProcess = (
-    type: "get-providers" | "get-provider-form" | "get-location" | "get-provider" | "get-price" | "create-order" | "get-payment-status",
+
+    type: "get-providers" | "get-provider-form" | "get-location" | "get-provider" | "get-price" | "create-order" | "get-payment-status" | "track",
+
     body: {
         service?: string | number,
         provider?: string | number,
         address?: string,
         reference?: string
     } = {},
+
     returnData?: boolean | string,
 
 ) =>

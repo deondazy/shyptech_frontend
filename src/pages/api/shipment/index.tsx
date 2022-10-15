@@ -40,6 +40,10 @@ const link = (
 
             return { type: "get", url: `pay/${reference}/verify` };
 
+        case "track":
+
+        return { type: "get", url: `ship/${reference}/track` };
+
         default:
             return { type: "post", url: `provider` };
     }

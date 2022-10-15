@@ -15,6 +15,7 @@
         "receiverstate",
         "senderstate",
         "shipmenttype",
+        "Shypdeck",
         "totp",
         "Ussd",
         "vehicletype"

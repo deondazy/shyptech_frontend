@@ -8,6 +8,7 @@ import { change, resizer } from 'utils';
 import 'assets/styles/main.scss';
 import { ToastHolder } from 'components/toast/ToastHolder';
 import { SetClientAvailability } from 'hooks/useIsClient';
+import { useSessionTimeout } from 'hooks/useSessionTimeout';
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -29,14 +30,11 @@ function App({ Component, pageProps }: AppProps) {
 
   // const unProtectedRoutes: string[] = ["", "/"];
   
-  const unProtectedRoutes: string[] = [];
+  const unProtectedRoutes: string[] = ["","/", "/send", "/track"];
 
-  // const redirectCondition =
-  //   (isInSession && [...unProtectedRoutes].includes(currentPath)) ||
-  //   (!auth.expiresAt && ![...unProtectedRoutes].includes(currentPath)) ||
-  //   (auth.expiresAt && !isInSession && unProtectedRoutes.includes(currentPath));
+  const redirectCondition = ![...unProtectedRoutes].includes(currentPath);
 
-  const redirectCondition = false;
+  // const redirectCondition = false;
 
   const resizeListener = (mode: "add" | "remove") => {
 
@@ -54,6 +52,8 @@ function App({ Component, pageProps }: AppProps) {
     );
 
   }
+
+  useSessionTimeout(isInSession, () => null);
 
   useEffect(() => {
 
@@ -84,13 +84,7 @@ function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
 
-    if (auth.expiresAt && !isInSession) store.dispatch({ type: "RESET_APP" });
-
-    if (!auth.expiresAt && ![...unProtectedRoutes].includes(currentPath)) {
-      router.replace("/");
-    }
-
-    if (isInSession && [...unProtectedRoutes, "/404", "/500"].includes(currentPath)) {
+    if (![...unProtectedRoutes, "/404", "/500"].includes(currentPath)) {
       // router.replace("/dashboard");
       router.replace("/");
     }
@@ -118,6 +112,7 @@ function App({ Component, pageProps }: AppProps) {
 
           :
           <>
+
             <ToastHolder />
 
             <RouteChange />
