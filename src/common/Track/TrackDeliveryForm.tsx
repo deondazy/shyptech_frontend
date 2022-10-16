@@ -46,7 +46,7 @@ export const TrackDeliveryForm: React.FC<Props> = ({ setTrackingData }) => {
 
         if (typeof res !== "string" && isObj(res)) {
 
-            setTrackingData(res);
+            setTrackingData({ data : res , trackingId : state.reference });
 
             setState((prevState) => ({ ...prevState, loading: false, success: undefined }));
 

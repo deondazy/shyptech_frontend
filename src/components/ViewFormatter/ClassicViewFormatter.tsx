@@ -47,7 +47,7 @@ interface Props {
     value?: string | number | string[],
     titleClass?: string,
     valueClass?: string,
-    type?: "settings-item" | "settings-item-flex" | "classic",
+    type?: "classic",
     onClick?(): void,
     className?: string,
     svgLeftIcon?: string,

@@ -4,7 +4,7 @@
   margin-bottom: 24px;
 
   &-group {
-    @include media-query(non-pc) {
+    @include media-query(mobile) {
       padding: 42px 20px 16px;
       width: 90%;
     }

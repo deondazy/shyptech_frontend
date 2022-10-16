@@ -53,7 +53,7 @@ function App({ Component, pageProps }: AppProps) {
 
   }
 
-  useSessionTimeout(isInSession, () => null);
+  useSessionTimeout(isInSession);
 
   useEffect(() => {
 

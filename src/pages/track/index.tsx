@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { LandingLayout } from 'layout';
-import { providerFormType } from 'types';
 import { useRouter } from 'next/router';
 import { TrackDeliveryForm } from 'common/Track/TrackDeliveryForm';
 import { SectionOne } from 'common/Landing/SectionOne';
+import { DeliveryTrackDisplay } from 'common/Track/DeliveryTrackDisplay';
+import { isObj } from 'utils';
 
 const Track: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
     const router = useRouter();
 
-    // const { view, reference } = router.query;
+    const { view } = router.query;
 
-    const [, setState] = useState<{
+    const [ state , setState] = useState<{
         beep: number,
-        data?: providerFormType
+        data?: { trackingId?: string , data?: any }
     }>({
-        beep: 0
+        beep: 0,
     });
 
     const engageTracking = (data: any) => {
@@ -45,6 +46,9 @@ const Track: React.FC<Props> = ({ isMobile, deviceWidth }) => {
             />
 
             <TrackDeliveryForm setTrackingData={(track) => engageTracking(track)} />
+
+            { view === "tracking" && isObj(state?.data) && <DeliveryTrackDisplay track={state?.data} trackingId={state?.data?.trackingId} />}
+            
 
         </LandingLayout >
 

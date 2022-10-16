@@ -8,7 +8,6 @@ import { authProcess } from 'redux/actions';
 
 export const useSessionTimeout = (
     isInSession: boolean,
-    triggerSessionBox: () => void
 ) => {
 
     const refreshToken = async () => {
@@ -32,41 +31,17 @@ export const useSessionTimeout = (
 
     }
 
-    const comparison = () => {
+    const comparison = async () => {
 
         const expiresAt = store?.getState()?.auth?.expiresAt;
 
         if (expiresAt) {
 
-            const workerState: workerType = store?.getState()?.worker;
-
             const difference = dateDifference(new Date(expiresAt), new Date());
-
-            if (difference.day > -1 && difference.minutes < 10) {
-
-                const lastIndex = (workerState?.activity?.length || 1) - 1;
-
-                if (!workerState?.activity?.[lastIndex]) {
-
-                    return;
-
-                }
-
-                const lastActivityTime = new Date(String(workerState.activity[lastIndex]));
-
-                const lastActivityDifference = dateDifference(new Date(), lastActivityTime);
-
-                if (lastActivityDifference.minutes < 10) {
-
-                    refreshToken();
-
-                }
-
-            }
 
             if (difference.day < 0) {
 
-                triggerSessionBox();
+                await refreshToken();
 
             }
 

@@ -4,7 +4,6 @@ import { LinkWrapper } from './LinkWrapper';
 import { ClassicViewFormatter } from './ViewFormatter/ClassicViewFormatter';
 import { ViewFormatterIconBox } from './ViewFormatter/ViewFormatterIconBox';
 import { RegularViewFormatter } from './ViewFormatter/RegularViewFormatter';
-import { RightIcon } from './Assets';
 
 export const ViewFormatter: React.FC<Props> = ({ wrapperClass, ...props }) => {
 
@@ -35,13 +34,13 @@ export const ViewFormatter: React.FC<Props> = ({ wrapperClass, ...props }) => {
 
 
                 {
-                    ["settings-item", "settings-item-flex", "classic"].includes(String(type))
+                    ["classic"].includes(String(type))
 
                         ?
 
                         <ClassicViewFormatter
                             {...props}
-                            type={type as "classic" | "settings-item" | "settings-item-flex"}
+                            type={type as "classic"}
                         />
 
                         :
@@ -50,7 +49,7 @@ export const ViewFormatter: React.FC<Props> = ({ wrapperClass, ...props }) => {
                 }
 
                 <ViewFormatterIconBox
-                    svgIcon={ type === "settings-item" ? RightIcon : props.svgRightIcon}
+                    svgIcon={props.svgRightIcon}
                     textIcon={props.rightTextIcon}
                     iconClass={classnames('view-formatter-left-icon', props.rightIconClass)}
                     linkIcon={props.rightLinkIcon}
@@ -66,7 +65,7 @@ interface Props {
     title?: string,
     value?: string | number | string[],
     valueClass?: string,
-    type?: "settings-item" | "settings-item-flex" | "classic" | string,
+    type?:  "classic" ,
     onClick?(): void,
     titleClass?: string,
     className?: string,

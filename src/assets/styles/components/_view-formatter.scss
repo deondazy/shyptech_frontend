@@ -12,25 +12,6 @@
       margin-bottom: auto;
     }
 
-    &.settings-item {
-      @include media-query(mobile) {
-        margin-bottom: 23px;
-      }
-
-      margin: 0 0 20px;
-      border-radius: 5px;
-      padding: 0;
-      background: #f3f3f3;
-
-      path {
-        stroke: color(secondary-text);
-      }
-
-      svg {
-        width: 25%;
-      }
-    }
-
     &.collapsible {
       padding-top: 0;
     }
@@ -38,33 +19,15 @@
     &.classic {
       padding: 0;
     }
-
-    &.dual {
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.0523656);
-
-      .view-formatter-left-icon > svg {
-        width: 100%;
-        max-width: 23px;
-        height: 100%;
-        max-height: 24px;
-      }
-
-      p {
-        margin: 0 !important;
-      }
-    }
   }
 
   &-title-box {
     display: flex;
     justify-content: space-between;
+    margin: auto;
   }
 
   &-left-icon {
-    &:last-child {
-      box-shadow: 0 0 0 0 rgba(0, 0, 0);
-    }
-
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -76,6 +39,10 @@
     height: 45px;
     min-height: 45px;
     object-fit: cover;
+
+    &:last-child {
+      box-shadow: 0 0 0 0 rgba(0, 0, 0);
+    }
   }
 
   span {
@@ -84,31 +51,13 @@
   }
 
   p {
+    @include font-size(regular);
     margin: 0;
-    color: color(dark);
-
-    &:first-child,
-    &.view-formatter-p {
-      @include font-size-override(medium);
-      margin-bottom: 5px;
-    }
-
-    &:last-child:not(&.view-formatter-p) {
-      @include font-size(regular);
-      margin-top: 5px;
-      color: color(secondary-text);
-    }
+    color: color(input-placeholder);
   }
 
-  &.extra-bold > div > p:first-of-type {
-    @include font-size-override(medium);
-    font-weight: 500;
-    color: color(dark);
-  }
-
-  &.extra-bold > span > p:first-of-type {
-    @include font-size-override(regular);
-    font-family: $main-font !important;
+  span p {
+    color: color(darker);
   }
 
   &.reverse {
@@ -122,59 +71,6 @@
 
     p:first-child {
       font-weight: 500;
-    }
-  }
-
-  &.settings-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15.5px 15px;
-    cursor: pointer;
-
-    &.color-dark {
-      p {
-        color: color(dark) !important;
-      }
-    }
-
-    &-flex {
-      @extend .settings-item;
-    }
-
-    &-flex > div:not(:first-of-type) {
-      display: none;
-    }
-
-    &-flex > div:first-of-type {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-
-      p {
-        @include font-size(regular);
-        color: color(dark) !important;
-
-        &:first-child {
-          max-width: 30%;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-      }
-    }
-
-    &-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0;
-    }
-
-    svg {
-      width: 14px;
-      height: 14px;
     }
   }
 
@@ -217,24 +113,6 @@
 
     &-show span {
       max-height: 1200px;
-    }
-  }
-
-  &-dual {
-    justify-content: unset !important;
-  }
-
-  &-text-box-flex {
-    display: flex;
-    align-items: center;
-
-    p {
-      margin-top: 0 !important;
-      margin-bottom: 0 !important;
-    }
-
-    p:first-child {
-      margin-right: 10px;
     }
   }
 
