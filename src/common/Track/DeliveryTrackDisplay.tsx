@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AssignedIcon, DeliveredIcon, EnRouteIcon, PendingIcon, ProgressTab, ViewFormatter } from "components";
 import { numberFormat } from "utils";
 
-export const DeliveryTrackDisplay: React.FC<Props> = ({ trackingId , track }) => {
+export const DeliveryTrackDisplay: React.FC<Props> = ({ trackingId, track , beep }) => {
+
+    const id = document?.getElementById("shypdeck-tracking-id");
 
     const currentProgress = Array.isArray(track?.data?.shipmentHistories) ? track?.data?.shipmentHistories : [];
 
@@ -55,9 +57,20 @@ export const DeliveryTrackDisplay: React.FC<Props> = ({ trackingId , track }) =>
 
     ];
 
+    useEffect(() => {
+
+        if (typeof window !== "undefined" && id) {
+
+            window?.scrollTo({ behavior: "smooth", top: id.scrollHeight });
+
+        }
+
+        // eslint-disable-next-line
+    }, [id , beep]);
+
     return (
 
-        <>
+        <div id={"shypdeck-tracking-id"}>
 
             <ViewFormatter
 
@@ -65,7 +78,7 @@ export const DeliveryTrackDisplay: React.FC<Props> = ({ trackingId , track }) =>
 
                 className="reverse"
 
-                value={ trackingId || "-----"}
+                value={trackingId || "-----"}
 
                 title={"Tracking ID"}
 
@@ -105,7 +118,7 @@ export const DeliveryTrackDisplay: React.FC<Props> = ({ trackingId , track }) =>
 
             </div>
 
-        </>
+        </div>
 
     )
 
@@ -115,6 +128,8 @@ interface Props {
 
     trackingId?: string,
 
-    track?: any
+    track?: any,
+
+    beep?: number
 
 }

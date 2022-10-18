@@ -12,18 +12,18 @@ const Track: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
     const { view } = router.query;
 
-    const [ state , setState] = useState<{
+    const [state, setState] = useState<{
         beep: number,
-        data?: { trackingId?: string , data?: any }
+        data?: { trackingId?: string, data?: any }
     }>({
         beep: 0,
     });
 
     const engageTracking = (data: any) => {
 
-        setState((prevState) => ({ ...prevState, data }));
+        setState((prevState) => ({ ...prevState, data , beep: prevState.beep + 1 }));
 
-        router.push("track?view=tracking")
+        view !== "tracking" && router.push("track?view=tracking")
 
     };
 
@@ -47,8 +47,18 @@ const Track: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
             <TrackDeliveryForm setTrackingData={(track) => engageTracking(track)} />
 
-            { view === "tracking" && isObj(state?.data) && <DeliveryTrackDisplay track={state?.data} trackingId={state?.data?.trackingId} />}
-            
+            {view === "tracking" && isObj(state?.data) &&
+
+                <DeliveryTrackDisplay
+
+                    beep={state.beep}
+
+                    track={state?.data} 
+                    
+                    trackingId={state?.data?.trackingId}
+
+                />}
+
 
         </LandingLayout >
 
