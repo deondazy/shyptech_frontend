@@ -168,7 +168,11 @@ export const quickValidation = (
 
         if (value?.length === 0) error.push("Please enter at least one recipient");
 
-    } else if (field === "reason") {
+    } else if (field === "reference") {
+
+        if (value?.length === 0) error.push("Please enter your shipment reference");
+
+    }  else if (field === "reason") {
 
         if (!value) error.push("Please enter a reason");
 

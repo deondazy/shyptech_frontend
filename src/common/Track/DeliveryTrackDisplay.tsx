@@ -75,7 +75,7 @@ export const DeliveryTrackDisplay: React.FC<Props> = ({ trackingId , track }) =>
 
                 className={"mt-5"}
 
-                activeIndex={currentProgress?.[currentProgress.length - 1]?.shippingStatus}
+                activeIndex={currentProgress?.[0]?.shippingStatus}
 
                 tabs={progressData}
 

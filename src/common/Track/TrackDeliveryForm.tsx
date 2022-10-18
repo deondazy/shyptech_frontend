@@ -110,7 +110,6 @@ export const TrackDeliveryForm: React.FC<Props> = ({ setTrackingData }) => {
                 <FormError
                     text={errorText}
                     condition={errorText !== ""}
-                // className={state.success === true ? "newsletter-form-success" : undefined}
                 />
 
                 <Button
