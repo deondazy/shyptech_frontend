@@ -86,11 +86,11 @@ export const ConfirmShipmentPayment: React.FC<{ reference?: string }> = ({ refer
 
                 <ComponentHolder
 
-                    // onPop={() => popProcess()} withPopButton={true}
-
                     visibility={!state.success}
 
-                    className={"shipment-processing form-field-group slideUpInside"}
+                    className={"shipment-processing form-field-group"}
+
+                    bodyClass={"fadeIn"}
 
                 >
 

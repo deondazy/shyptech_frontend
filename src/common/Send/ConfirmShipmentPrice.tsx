@@ -51,13 +51,15 @@ export const ConfirmShipmentPrice: React.FC<Props> = ({ shipmentInfo, trigger, o
 
             } as any, true));
 
-        if ( typeof createOrder?.authorizationUrl === "string" ) {
+        if (typeof createOrder?.authorizationUrl === "string") {
 
             window.location = createOrder?.authorizationUrl;
 
-        }
+        } else {
 
-        setState((prevState) => ({ ...prevState, loading: false }));
+            setState((prevState) => ({ ...prevState, loading: false }));
+
+        }
 
     }
 
@@ -95,7 +97,7 @@ export const ConfirmShipmentPrice: React.FC<Props> = ({ shipmentInfo, trigger, o
 
                 outsideEscape={!state.loading}
 
-                toggleOut={() => toggleOut()} 
+                toggleOut={() => toggleOut()}
 
                 visibility={state.visibility}
 
