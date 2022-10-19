@@ -40,9 +40,7 @@ export const ConfirmShipmentPayment: React.FC<{ reference?: string }> = ({ refer
 
             if (!usableStatus) {
 
-                setTimeout(() => setState((prevState) => ({ ...prevState, beep: state.beep + 1 })), 500);
-
-                return;
+                setTimeout(() => setState((prevState) => ({ ...prevState, beep: state.beep + 1 })), 1000);
 
             }
 
