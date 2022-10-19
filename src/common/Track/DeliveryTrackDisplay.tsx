@@ -112,7 +112,7 @@ export const DeliveryTrackDisplay: React.FC<Props> = ({ trackingId, track , beep
 
                     title="Amount Paid"
 
-                    value={numberFormat(0.00)}
+                    value={numberFormat((track?.data?.deliveryAmount || 0.0) / 100 )}
 
                 />
 
