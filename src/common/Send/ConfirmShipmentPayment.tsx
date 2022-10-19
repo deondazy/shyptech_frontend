@@ -36,6 +36,16 @@ export const ConfirmShipmentPayment: React.FC<{ reference?: string }> = ({ refer
 
             const check = await dispatch(shipmentProcess("get-payment-status", { reference }, true));
 
+            const usableStatus = ["failed", "sucessful"]?.includes(check.status);
+
+            if (!usableStatus) {
+
+                setTimeout(() => setState((prevState) => ({ ...prevState, beep: state.beep + 1 })), 500);
+
+                return;
+
+            }
+
             setState((prevState) => ({
 
                 ...prevState,
