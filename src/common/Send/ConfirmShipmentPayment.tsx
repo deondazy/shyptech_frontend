@@ -36,7 +36,7 @@ export const ConfirmShipmentPayment: React.FC<{ reference?: string }> = ({ refer
 
             const check = await dispatch(shipmentProcess("get-payment-status", { reference }, true));
 
-            const usableStatus = ["failed", "sucessful"]?.includes(check.status);
+            const usableStatus = ["failed", "sucessful", "success"]?.includes(check.status);
 
             if (!usableStatus) {
 
@@ -54,7 +54,7 @@ export const ConfirmShipmentPayment: React.FC<{ reference?: string }> = ({ refer
 
                 ...(check?.status === "failed" ? { errorTrigger: state.errorTrigger + 1 } : {}),
 
-                ...(check?.status === "sucessful" ? { success: true } : {})
+                ...((check?.status === "sucessful" || check?.status === "success" ) ? { success: true } : {})
 
 
             }));
