@@ -10,7 +10,7 @@ export const MobileHeaderToggler: React.FC<Props> = ({ setExpansion, isExpanded 
 
             <Link href={"/"}>
                 <a>
-                    <img src={Logo} alt={"shypdeck"} />
+                    <img src={Logo} alt={"Shyptech"} />
                 </a>
             </Link>
 

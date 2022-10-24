@@ -7,7 +7,7 @@ const Policy: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
     return (
         <LandingLayout
-            headTitle={"Shypdeck | Privacy Policy"}
+            headTitle={"Shyptech | Privacy Policy"}
             isMobile={isMobile}
             shadyHeader={true}
             deviceWidth={deviceWidth}

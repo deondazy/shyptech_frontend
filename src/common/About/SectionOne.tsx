@@ -14,7 +14,7 @@ export const AboutSectionOne: React.FC<{}> = () => {
                     <div className='landing-page-section-two-flex-left'>
 
                         <p>
-                            At Shypdeck, your deliveries have just one job; to get delivered in good condition and within specified time frame. 
+                            At Shyptech, your deliveries have just one job; to get delivered in good condition and within specified time frame. 
                             We help you achieve this by providing access to an array of reliable delivery service providers ready to serve you.
                         </p>
 
@@ -25,7 +25,7 @@ export const AboutSectionOne: React.FC<{}> = () => {
                         <img 
                             loading='lazy'
                             src={"https://res.cloudinary.com/bohairs/image/upload/v1662357403/shypdeck/about-section-zero_jzz3vx.png"} 
-                            alt={"shypdeck"} 
+                            alt={"Shyptech"} 
                         />
 
                     </div>

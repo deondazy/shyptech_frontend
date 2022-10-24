@@ -48,7 +48,7 @@ const Home: React.FC<Props> = ({ isMobile, deviceWidth }) => {
     return (
 
         <LandingLayout
-            headTitle={"Shypdeck"}
+            headTitle={"Shyptech"}
             isMobile={isMobile}
             deviceWidth={deviceWidth}
             showFooter={true}

@@ -3,19 +3,19 @@ import Head from 'next/head';
 
 export const HtmlHead = ({ title }) => {
   const description =
-    `Shypdeck is a delivery service platform where users can access a variety of reliable` +
+    `Shyptech is a delivery service platform where users can access a variety of reliable` +
     `and trusted delivery companies or agents to handle their deliveries.`;
 
-  const link = 'http://www.shypdeck.com';
+  const link = 'http://www.shyptech.com';
   const logo = 'https://res.cloudinary.com/bohairs/image/upload/v1662357024/shypdeck/Group_3_3_tfyjup.png';
 
   const seoAttributes = `{
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Shypdeck",
-    "alternateName": ["Shypdeck"],
-    "url": "http://www.shypdeck.com",
-    "sameAs": ["http://web.shypdeck.com"],
+    "name": "Shyptech",
+    "alternateName": ["Shyptech"],
+    "url": "http://www.shyptech.com",
+    "sameAs": ["http://web.shyptech.com"],
 
     "logo": "https://res.cloudinary.com/bohairs/image/upload/v1662357024/shypdeck/Group_3_3_tfyjup.png",
     "contactPoint": {

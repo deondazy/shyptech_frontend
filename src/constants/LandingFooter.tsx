@@ -13,13 +13,13 @@ interface FooterTypes {
 export const SocialLinks = {
     // facebook: "https://www.facebook.com/",
     // youtube: "https://www.youtube.com/channel",
-    instagram: "https://www.instagram.com/shypdeck",
+    instagram: "https://www.instagram.com/shyptech",
     // twitter: "https://www.twitter.com"
 }
 
 export const LandingFooterAbout: Array<FooterTypes> = [{
-    title: "hello@shypdeck.com",
-    link: "mailto:hello@shypdeck.com"
+    title: "hello@shyptech.com",
+    link: "mailto:hello@shyptech.com"
 }]
 
 export const LandingFooterServices: Array<FooterTypes> = [
@@ -39,7 +39,7 @@ export const LandingFooterServices: Array<FooterTypes> = [
 
 export const LandingFooterCompany: Array<FooterTypes> = [
     {
-        iconsTexts: ["@shypdeck"],
+        iconsTexts: ["@shyptech"],
         icons: [Instagram],
         iconLinks: [SocialLinks.instagram]
     }

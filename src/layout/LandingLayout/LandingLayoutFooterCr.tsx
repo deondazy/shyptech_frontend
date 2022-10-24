@@ -7,7 +7,7 @@ const LandingLayoutFooterCr: FunctionComponent = () => {
 
             <div className="landingLayout-footer-cr-holder">
 
-                <p> ©{new Date().getFullYear()} Shypdeck. All rights reserved </p>
+                <p> ©{new Date().getFullYear()} Shyptech. All rights reserved </p>
 
             </div>
 

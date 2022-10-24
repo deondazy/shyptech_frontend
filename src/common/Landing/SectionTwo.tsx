@@ -15,7 +15,7 @@ export const SectionTwo: React.FC<{}> = () => {
                     <div className='landing-page-section-two-flex-left'>
 
                         <p>
-                            At Shypdeck, your deliveries have just one job; to get delivered in good condition and within specified time frame.
+                            At Shypteck, your deliveries have just one job; to get delivered in good condition and within specified time frame.
 
                         </p>
 
@@ -30,7 +30,7 @@ export const SectionTwo: React.FC<{}> = () => {
                         <img 
                             loading='lazy'
                             src={"https://res.cloudinary.com/bohairs/image/upload/v1662357406/shypdeck/about-side_xjqvxd.png"} 
-                            alt={"shypdeck"} 
+                            alt={"shypteck"} 
                         />
 
                     </div>

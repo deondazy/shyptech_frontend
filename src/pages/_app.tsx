@@ -107,7 +107,7 @@ function App({ Component, pageProps }: AppProps) {
         (redirectCondition || !clientMode) ?
 
           <HtmlHead
-            title={"Shypdeck"}
+            title={"Shyptech"}
           />
 
           :

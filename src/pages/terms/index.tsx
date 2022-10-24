@@ -7,7 +7,7 @@ const Terms: React.FC<Props> = ({ isMobile, deviceWidth }) => {
 
     return (
         <LandingLayout
-            headTitle={"Shypdeck | Terms And Conditions"}
+            headTitle={"Shyptech | Terms And Conditions"}
             isMobile={isMobile}
             shadyHeader={true}
             deviceWidth={deviceWidth}

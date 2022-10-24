@@ -10,7 +10,7 @@ export const PrivacyPolicy = () => {
 
                 className='sub no-order'
                 title={"Introduction"}
-                content={`This Privacy Notice (“Notice”) guides your use of our Website: www.shypdeck.com (“the Website”) 
+                content={`This Privacy Notice (“Notice”) guides your use of our Website: www.shypteck.com (“the Website”) 
                 and your rights regarding our collection, use, storage and protection of your personal data when you visit,
                  access, browse through and/or use our Website or Services. Your privacy is important to us. `}
             />
@@ -136,7 +136,7 @@ export const PrivacyPolicy = () => {
 
                 className='sub order-numerical'
 
-                content={"You may seek to exercise any of the above rights at any time by sending an email to us via hello @shypdeck.com."}
+                content={"You may seek to exercise any of the above rights at any time by sending an email to us via hello@shypteck.com."}
 
                 value={`The supervisory authority is the Nigerian Data Protection Bureau(NDPB), and you can
                  send your complaint via email to info @ndpb.gov.ng`}
@@ -235,7 +235,7 @@ export const PrivacyPolicy = () => {
                 title={"Complaints"}
 
                 value={`If you are concerned about an alleged breach of data protection law or any other regulation by us, 
-                you can contact us via hello @shypdeck.com.We undertake to investigate and provide information about your 
+                you can contact us via hello @shypteck.com.We undertake to investigate and provide information about your 
                 complaint within seven(7) days. `}
 
                 content={`Please be informed that you may complain to the relevant data protection authority if your complaints
@@ -265,7 +265,7 @@ export const PrivacyPolicy = () => {
                 dangerousContent={`
                                 <p> If you have any questions relating to this Notice, your rights under this
                                  Notice, or are not satisfied with how we manage your personal data, kindly reach out to us via 
-                                 <a href="mailto:hello@shypdeck.com">  hello@shypdeck.com </a> </p>`
+                                 <a href="mailto:hello@shypteck.com">  hello@shypteck.com </a> </p>`
                 }
 
             />

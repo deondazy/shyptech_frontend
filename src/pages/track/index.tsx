@@ -30,7 +30,7 @@ const Track: React.FC<Props> = ({ isMobile, deviceWidth }) => {
     return (
 
         <LandingLayout
-            headTitle={"Shypdeck | Track"}
+            headTitle={"Shyptech | Track"}
             isMobile={isMobile}
             deviceWidth={deviceWidth}
             showFooter={true}

@@ -8,8 +8,8 @@ export const AboutSectionThree: React.FC<{}> = () => {
     const items = [
         {
             title: "Email",
-            value: `hello@shypdeck.com`,
-            link: "mailto:hello@shypdeck.com",
+            value: `hello@shypteck.com`,
+            link: "mailto:hello@shypteck.com",
             wrapperClass: "pl-0 pr-0 pt-0"
         },
         // {
@@ -48,7 +48,7 @@ export const AboutSectionThree: React.FC<{}> = () => {
                         <img 
                             loading='lazy'
                             src={"https://res.cloudinary.com/bohairs/image/upload/v1662357405/shypdeck/about-telephone_yjsu5x.png"} 
-                            alt={"shypdeck"} 
+                            alt={"shypteck"} 
                         />
 
                     </div>

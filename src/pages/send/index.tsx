@@ -46,7 +46,7 @@ const Send: React.FC<Props> = ({ isMobile, deviceWidth }) => {
     return (
 
         <LandingLayout
-            headTitle={"Shypdeck | About"}
+            headTitle={"Shyptech | About"}
             isMobile={isMobile}
             deviceWidth={deviceWidth}
             showFooter={true}

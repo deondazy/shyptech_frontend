@@ -16,14 +16,14 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                     <p className="color-dark pl-1">
                     These Terms of Use (the "Terms") represent a legally binding contract between you
-                    and Shypdeck Technologies Limited ("Shypdeck", "we" or "us").
-                    By accessing or using content; services and materials on Shypdeck's website
-                    located at <a href="/"> https://www.shypdeck.com/ </a> (the "Website"),
+                    and Shyptech Technologies Limited ("Shyptech", "we" or "us").
+                    By accessing or using content; services and materials on Shyptech's website
+                    located at <a href="/"> https://www.shyptech.com/ </a> (the "Website"),
                     any of the services provided therein (collectively, the "Services") and
                     the materials may include logos, text graphics, videos, images,
                     photos, software and other content (collectively, the "Materials"),
                     you agree that you have read, understood, accept and agree to be bound by these Terms.
-                    If you do not agree with any of these Terms, do not access or otherwise make use of Shypdeck’s services.
+                    If you do not agree with any of these Terms, do not access or otherwise make use of Shyptech's services.
                     </p>
 
                     `}
@@ -41,16 +41,16 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                 items={[
 
-                    `Shypdeck (“Shypdeck”, “We”, “Us”, or “Our”) is a platform which provides users an array of delivery 
+                    `Shyptech (“Shyptech”, “We”, “Us”, or “Our”) is a platform which provides users an array of delivery 
                     service providers to select from in a bid to efficiently move goods from one point to another effectively
                      and at a convenient rate. Customers choice on their desired delivery service providers are adhered to with
                       a strong bias for prompt delivery on a case-by-case basis. `,
 
-                    `Shypdeck may vary the Services from time to time at its absolute discretion, and users shall be 
+                    `Shyptech may vary the Services from time to time at its absolute discretion, and users shall be 
                     notified of any such variations where necessary. Any changes will be posted on the Website(s). `,
 
 
-                    `This “Terms of Use” is an Agreement between you and Shypdeck. It details Shypdeck’s 
+                    `This “Terms of Use” is an Agreement between you and Shyptech. It details Shyptech's 
                     obligations to you. It also highlights the risks of using our Services, and you must 
                     consider such risks carefully as the provisions of this Agreement will bind you through 
                     your use of this Website or any of our Services.`
@@ -67,7 +67,7 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                 items={[
 
-                    `Shypdeck is committed to managing your Personal Information in line with global industry best practices. 
+                    `Shyptech is committed to managing your Personal Information in line with global industry best practices. 
                     You can read our Privacy Notice to understand how we use your information and the steps we take to protect your information. `,
                 ]}
             />
@@ -89,7 +89,7 @@ export const TermsAndConditions: React.FC = ({ }) => {
                             first name, last name, phone number. We may seek to verify your information (by ourselves or through third parties) 
                             You permit us to do all these. You have the right to refuse to authorize the use and/or disclosure of your Personal 
                             Information after submitting your information by sending an email to 
-                            <a href="mailto:hello@shypdeck.com"> hello@shypdeck.com </a>
+                            <a href="mailto:hello@shyptech.com"> hello@shyptech.com </a>
                         </p>
 
                         <p> 
@@ -153,7 +153,7 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                 title='Representations and Warranties:'
 
-                content='You represent and warrant to Shypdeck that: '
+                content='You represent and warrant to Shyptech that: '
 
                 items={[
                     `You have full power and authority to enter into, execute, deliver and perform this Agreement as a customer and 
@@ -178,10 +178,10 @@ export const TermsAndConditions: React.FC = ({ }) => {
                 items={[
                     `You agree to not allow anyone else to access or use your information and tracking details at any time during your 
                     use of the Platform. You also undertake to comply with all reasonable instructions we may issue regarding placing 
-                    an order on our Website. Where you share your personal information with anyone not privy to this Agreement, Shypdeck 
-                    will not be liable to you for losses or damages. You undertake to contact Shypdeck if you become aware of any unauthorized order 
+                    an order on our Website. Where you share your personal information with anyone not privy to this Agreement, Shyptech 
+                    will not be liable to you for losses or damages. You undertake to contact Shyptech if you become aware of any unauthorized order 
                     placed on our Website using your personal information. `,
-                    `As a delivery service provider on our Platform, you undertake to notify Shypdeck of any suspicious order 
+                    `As a delivery service provider on our Platform, you undertake to notify Shyptech of any suspicious order 
                     or unfulfilled order(s) which has been received more than thrice on our Website.`
                 ]}
 
@@ -262,31 +262,31 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                     `Copy, rent, lease, sell, transfer, assign, sublicense, disassemble, reverse engineer 
                     or decompile (except if expressly authorized 
-                    by Shypdeck or by applicable statutory law), modify or alter any part of the Services;`,
+                    by Shyptech or by applicable statutory law), modify or alter any part of the Services;`,
 
                     `Violate the contractual, personal, intellectual property or other rights of any party, including by using, uploading, 
                     transmitting, distributing, or otherwise making available any information or material made available through the Services 
                     in any manner that infringes any copyright, trademark, patent, trade secret, or other rights of any party 
                     (including rights of privacy or publicity); Improperly use support channels or complaint buttons to make false 
-                    reports to Shypdeck;`,
+                    reports to Shyptech;`,
 
 
                     `Encourage any third party to (i) directly or indirectly generate usage, queries, impressions, or clicks through 
                     any automated, deceptive, fraudulent, or other invalid means; (ii) edit or modify any tag, or remove, obscure or 
-                    minimize any tag in any way; or (iii) engage in any action or practice that reflects poorly on Shypdeck or 
-                    otherwise disparages or devalues Shypdeck's reputation or goodwill;`,
+                    minimize any tag in any way; or (iii) engage in any action or practice that reflects poorly on Shyptech or 
+                    otherwise disparages or devalues Shyptech's reputation or goodwill;`,
 
-                    `Make representations (with respect to Shypdeck), which are not approved in advance and in writing by Shypdeck.
-                    You shall obtain Shypdeck's prior written approval to the content of any marketing message, and with respect to any 
-                    use of Shypdeck's trade name and/or trademarks and/or designs in connection with the Services and Materials;`,
+                    `Make representations (with respect to Shyptech), which are not approved in advance and in writing by Shyptech.
+                    You shall obtain Shyptech's prior written approval to the content of any marketing message, and with respect to any 
+                    use of Shyptech's trade name and/or trademarks and/or designs in connection with the Services and Materials;`,
 
                     `Violate any applicable laws or regulations, or encourage or promote any illegal activity including, but not
                     limited to, copyright infringement, trademark infringement, defamation, invasion of privacy, identity theft,
                     hacking, cracking or distribution of counterfeit software, or cheats or hacks for the Services;`,
 
                     `Attempt to use the Services on or through any other platform or third-party service provider that 
-                    Shypdeck does not authorize. Any such use is at your own risk and may subject you to additional or 
-                    different terms. Shypdeck takes no responsibility for your use of the Services through any platform 
+                    Shyptech does not authorize. Any such use is at your own risk and may subject you to additional or 
+                    different terms. Shyptech takes no responsibility for your use of the Services through any platform 
                     or third-party delivery service provider that is not authorized by it;`,
 
                     `Attempt to interfere with, hack into or decipher any transmissions to or from the servers for the Services;`,
@@ -306,9 +306,9 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
             <OfficialParagraph
 
-                content={`You agree to indemnify and hold Shypdeck and its employees, officers, directors, employees, consultants, 
+                content={`You agree to indemnify and hold Shyptech and its employees, officers, directors, employees, consultants, 
                 affiliates, agents, licensors, and business partners (collectively, the "Indemnified Entities") harmless from and against any and 
-                all costs, damages, liabilities, and expenses (including attorneys’ fees and costs of defense) Shypdeck 
+                all costs, damages, liabilities, and expenses (including attorneys’ fees and costs of defense) Shyptech 
                 or any other Indemnified Entity suffers in relation to, arising from, or for the purpose of avoiding, any claim 
                 or demand from any dispute which may arise from your use of our Service(s) on the Website.`}
 
@@ -354,7 +354,7 @@ export const TermsAndConditions: React.FC = ({ }) => {
                         value: `
                                 All content and materials, including but not limited to images, text, visual interfaces, 
                                 information, data, and computer code, provided by us through our Service (our "Content") 
-                                and all related intellectual property rights are the property of Shypdeck and/or its third-party 
+                                and all related intellectual property rights are the property of Shyptech and/or its third-party 
                                 licensors. Our content is protected by Nigerian and international intellectual property laws and 
                                 treaties. You are permitted to use our content only in relation to our Services. You may not copy, 
                                 modify, sell, reproduce, distribute, republish, display, post, create derivative or collective works 
@@ -377,11 +377,11 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                         value: `Subject to a User’s delivery order on the Website, there shall be displayed a result of 
                         searches of available delivery service providers who are available to satisfy the order and the 
-                        attendant rate as well as recommended delivery timeline. Shypdeck reserves the unilateral right 
+                        attendant rate as well as recommended delivery timeline. Shyptech reserves the unilateral right 
                         to change the results of the order applicable on the website. It may also transmit the delivery 
                         order to another delivery service provider which is different from the selected delivery service provider. `,
                         items: [
-                            `Shypdeck may also introduce an extra fee for the purpose of insuring goods transmitted on our platform. 
+                            `Shyptech may also introduce an extra fee for the purpose of insuring goods transmitted on our platform. 
                             You may opt to pay for same. Where you do not select and pay the attendant insurance fee as 
                             advised from time to time. You agree that you shall not hold us responsible for the loss or damage 
                             of any good; perishable or otherwise. `,
@@ -407,20 +407,20 @@ export const TermsAndConditions: React.FC = ({ }) => {
                     {
                         title:
                             " Service Disclaimer",
-                        value: `The content of the Services that you obtain or receive from Shypdeck, and its delivery service provider,
+                        value: `The content of the Services that you obtain or receive from Shyptech, and its delivery service provider,
                          partners, sponsors, advertisers, licensors or otherwise through the Services is for your use (as described above) only.`
 
                     },
 
                     {
                         title: "Disclaimer of Warranties",
-                        value: "We try to keep Shypdeck available at all times, bug-free and safe, however, you use it at your own risk.",
+                        value: "We try to keep Shyptech available at all times, bug-free and safe, however, you use it at your own risk.",
                         items: [
                             `Our Website and Services are provided “ as is” without any express, implied and /or
-                             statutory warranties.Without limiting the generality of the foregoing, Shypdeck makes no warranty 
+                             statutory warranties.Without limiting the generality of the foregoing, Shyptech makes no warranty 
                              that our Website and Services will meet your requirements or that our Website will be uninterrupted, 
                              timely, secure, or error - free.No advice or information, whether oral or written, obtained by you through 
-                             our Website or from Shypdeck; through its authorized representatives, employees, contractors, shall create any warranty.`
+                             our Website or from Shyptech; through its authorized representatives, employees, contractors, shall create any warranty.`
                         ]
                     },
 
@@ -439,16 +439,16 @@ export const TermsAndConditions: React.FC = ({ }) => {
                 {...{
                     title: "Limitation of Liability",
                     value: `You agree to the limited liability clause to the maximum extent permitted by applicable law:
-                         Shypdeck will in no way be liable for any direct, indirect, incidental, punitive, consequential,
+                         Shyptech will in no way be liable for any direct, indirect, incidental, punitive, consequential,
                           special, or exemplary damages or damages relating to failures of telecommunications, the internet, 
                           electronic communications, corruption, security, loss or theft of data, viruses, spyware, loss of 
                           business, revenue, profits or investment, or use of software or hardware that does not meet  
-                          's systems requirements.Shypdeck shall also not be liable for any damages including damages 
+                          's systems requirements.Shyptech shall also not be liable for any damages including damages 
                           resulting from revenue loss, profit loss, use, data, goodwill, business interruption, fraudulent
-                           or illicit acts perpetuated by users or any other intangible losses(whether Shypdeck has been 
-                            advised of the possibility of such damages or not) arising out of Shypdeck’s Website or 
+                           or illicit acts perpetuated by users or any other intangible losses(whether Shyptech has been 
+                            advised of the possibility of such damages or not) arising out of Shyptech's Website or 
                             Services(including, without limitation to inability to use, or arising from the result of the use 
-                                of Shypdeck’s Website or Services) whether such damages are based on warranty, tort, 
+                                of Shyptech's Website or Services) whether such damages are based on warranty, tort, 
                                 contract, statute or any other legal theory.`
                 }}
             />
@@ -459,7 +459,7 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                 {...{
                     title: "Indemnity",
-                    value: `You agree to defend, indemnify, and hold Shypdeck, its employees, contractors, directors,
+                    value: `You agree to defend, indemnify, and hold Shyptech, its employees, contractors, directors,
                             employees, agents, licensors, and suppliers, harmless from and against any claims, actions or
                             demands, liabilities and settlements including without limitation, reasonable legal and
                             accounting fees, resulting from, or alleged to result from, your violation of this Agreement.`
@@ -478,7 +478,7 @@ export const TermsAndConditions: React.FC = ({ }) => {
                             exclusion of liability for certain damages.Accordingly, some of the above disclaimers and limitations
                             of liability may not apply to you.To the extent that any Party may not, as a matter of applicable law,
                             disclaim any implied warranty or limit its liabilities, the scope and duration of such warranty and
-                            the extent of the Shypdeck
+                            the extent of the Shyptech
                             Party's liability shall be the minimum permitted under such applicable law.`
                 }}
 
@@ -515,7 +515,7 @@ export const TermsAndConditions: React.FC = ({ }) => {
                             to the User’s actions and inactions. `,
                     items: [`Refunds shall be made after Seventy - Two(72) hours of an official request of same has been addressed
                             and considered to be satisfactory in accordance with the provision.Where you require a refund
-                            please send us an email via; hello @shypdeck.com `]
+                            please send us an email via; hello @shyptech.com `]
                 }}
 
             />
@@ -587,12 +587,12 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                 items={[
 
-                    `If you violate these Terms or any of our User T & Cs on the website; Shypdeck reserves the right to issue you a 
+                    `If you violate these Terms or any of our User T & Cs on the website; Shyptech reserves the right to issue you a 
                     warning regarding the violation or to immediately terminate or suspend your use of the Services.
                     We may also prohibit your use of the website by blocking computers using your IP address from 
                     accessing the website or contacting your Internet service provider to request that they block your access to the 
                     website and / or bringing court proceedings against you where there has been a violation of these Terms of Use.
-                    You agree that Shypdeck does not need to provide you notice before terminating or suspending your use of the 
+                    You agree that Shyptech does not need to provide you notice before terminating or suspending your use of the 
                     Services, but it may provide such notice at its sole discretion. `,
 
                     `You agree that you will comply fully with these Terms.You agree to comply with all local and international rules regarding 
@@ -640,7 +640,7 @@ export const TermsAndConditions: React.FC = ({ }) => {
 
                 dangerousContent={`
         <p> If you have any complaints or reservations about us or any of the Services we provide,
-         you may contact us via: <a href="mailto:hello@shypdeck.com"> hello@shypdeck.com</a> </p>`}
+         you may contact us via: <a href="mailto:hello@shyptech.com"> hello@shyptech.com</a> </p>`}
 
             />
 
