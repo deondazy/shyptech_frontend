@@ -98,11 +98,11 @@ export const DeliveryServiceSelector: React.FC<Props> = ({ onSelectionSuccess })
 
         setState((prevState) => ({ ...prevState, success: undefined, attempt: prevState.attempt + 1 }))
 
-        if (!state?.service?.value || !state?.provider?.value || state.loading) return;
+        if (!state?.service?.value || state.loading) return;
 
         if (formError) return;
 
-        getProviderForm();
+//         getProviderForm();
 
     }
 
