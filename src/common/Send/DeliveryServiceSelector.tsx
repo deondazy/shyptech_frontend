@@ -131,7 +131,7 @@ export const DeliveryServiceSelector: React.FC<Props> = ({ onSelectionSuccess })
                     onChange={(e) => onChanged(e, "service")}
                 />
 
-                <FormField
+<!--                 <FormField
                     label="Delivery Company"
                     placeHolder={"Select a delivery company?"}
                     options={providers()}
@@ -140,7 +140,7 @@ export const DeliveryServiceSelector: React.FC<Props> = ({ onSelectionSuccess })
                     error={state.attempt > 0 && errorItem(state?.error || {}, "provider")}
                     onKeyDown={(e: React.KeyboardEvent) => keyDown(e)}
                     type={"option"}
-                />
+                /> -->
 
                 <FormError
                     text={errorText}
