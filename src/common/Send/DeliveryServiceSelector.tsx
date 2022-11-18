@@ -34,19 +34,19 @@ export const DeliveryServiceSelector: React.FC<Props> = ({ onSelectionSuccess })
 
     }
 
-    const providers = () => {
+//     const providers = () => {
 
-        const selectedService = services?.find(item => item?.id === state?.service?.value);
+//         const selectedService = services?.find(item => item?.id === state?.service?.value);
 
-        if (selectedService) {
+//         if (selectedService) {
 
-            return selectedService?.providers?.map(item => ({ label: item.providerName, value: item.providerId }));
+//             return selectedService?.providers?.map(item => ({ label: item.providerName, value: item.providerId }));
 
-        }
+//         }
 
-        return [];
+//         return [];
 
-    }
+//     }
 
     const onChanged = (e: any, field: string) => {
 
@@ -56,41 +56,41 @@ export const DeliveryServiceSelector: React.FC<Props> = ({ onSelectionSuccess })
 
     }
 
-    const getProviderForm = async () => {
+//     const getProviderForm = async () => {
 
-        change(true, "loading", setState);
+//         change(true, "loading", setState);
 
-        const res = await Promise.all([
+//         const res = await Promise.all([
 
-            await dispatch(shipmentProcess("get-provider-form", { provider: state?.provider?.value }, true)),
+//             await dispatch(shipmentProcess("get-provider-form", { provider: state?.provider?.value }, true)),
 
-            await dispatch(shipmentProcess("get-provider", { provider: state?.provider?.value }, true))
+//             await dispatch(shipmentProcess("get-provider", { provider: state?.provider?.value }, true))
 
-        ]) as { provider?: { [key: string]: any }, form?: { [key: string]: any } }[] | string;
+//         ]) as { provider?: { [key: string]: any }, form?: { [key: string]: any } }[] | string;
 
-        if (typeof res !== "string" && isObj(res[0]?.provider) && isObj(res[0]?.form) && isObj(res[1])) {
+//         if (typeof res !== "string" && isObj(res[0]?.provider) && isObj(res[0]?.form) && isObj(res[1])) {
 
-            const data = {
+//             const data = {
 
-                provider: { ...res[0].provider, ...res[1] , providerId: state?.provider?.value  },
+//                 provider: { ...res[0].provider, ...res[1] , providerId: state?.provider?.value  },
 
-                form: res[0].form
+//                 form: res[0].form
 
-            } as any;
+//             } as any;
 
-            onSelectionSuccess(data);
+//             onSelectionSuccess(data);
 
-            setState((prevState) => ({ ...prevState, loading: false, success : undefined }));
+//             setState((prevState) => ({ ...prevState, loading: false, success : undefined }));
 
-            return;
+//             return;
 
-        }
+//         }
 
-        setState((prevState) => ({ ...prevState, loading: false, success: String(res) }));
+//         setState((prevState) => ({ ...prevState, loading: false, success: String(res) }));
 
-        change(false, "loading", setState);
+//         change(false, "loading", setState);
 
-    }
+//     }
 
     const preProcess = () => {
 
@@ -164,7 +164,7 @@ export const DeliveryServiceSelector: React.FC<Props> = ({ onSelectionSuccess })
 
 type stateType = {
     service?: { key: string, value: number },
-    provider?: { key: string, value: number },
+//     provider?: { key: string, value: number },
     loading: boolean,
     attempt: number,
     error: {},
@@ -173,5 +173,5 @@ type stateType = {
 };
 
 interface Props {
-    onSelectionSuccess(e: providerFormType): void
+//     onSelectionSuccess(e: providerFormType): void
 }
