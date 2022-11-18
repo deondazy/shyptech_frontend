@@ -173,5 +173,5 @@ type stateType = {
 };
 
 interface Props {
-//     onSelectionSuccess(e: providerFormType): void
+    onSelectionSuccess(e: ''): void
 }
